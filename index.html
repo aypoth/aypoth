@@ -2778,7 +2778,7 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
                    style="width: 100%; padding: 15px 15px 15px 50px; border-radius: 12px; border: 1.5px solid #eee; background: #fdfdfd; color: #333; outline: none; font-size: 14px; transition: 0.3s; font-weight: 500; box-sizing: border-box;">
         </div>
 
-        <div style="position: relative; margin-bottom: 10px;">
+        <div style="position: relative; margin-bottom: 25px;">
             <span style="position: absolute; left: 18px; top: 15px; color: #ff0000; font-size: 16px;"><i class="fas fa-lock"></i></span>
             <input type="password" id="l-pass" placeholder="Password" 
                    style="width: 100%; padding: 15px 50px 15px 50px; border-radius: 12px; border: 1.5px solid #eee; background: #fdfdfd; color: #333; outline: none; font-size: 14px; transition: 0.3s; font-weight: 500; box-sizing: border-box;">
@@ -2787,51 +2787,44 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             </span>
         </div>
 
-        <div style="text-align: right; margin-bottom: 30px;"></div>
-
         <button onclick="handleAuth('login')" 
                 style="width: 100%; height: 55px; border-radius: 12px; border: none; background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%); color: #ffffff; font-weight: 700; text-transform: uppercase; cursor: pointer; box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3); transition: 0.3s; font-size: 16px; letter-spacing: 1px;">
             Login Now
         </button>
 
-        <!-- --- গুগল লগইন বাটন সেকশন (নিচে যুক্ত করা হলো) --- -->
-        <div style="text-align: center; margin-top: 20px;">
+        <div style="text-align: center; margin-top: 25px;">
             <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
                 <div style="flex: 1; height: 1px; background: #eee;"></div>
                 <span style="padding: 0 15px; color: #999; font-size: 13px; font-weight: 500;">Or Connect With</span>
                 <div style="flex: 1; height: 1px; background: #eee;"></div>
             </div>
             
-<!-- গুগলের অফিশিয়াল জাভাস্ক্রিপ্ট স্ক্রিপ্ট -->
-<script src="https://accounts.google.com/gsi/client" async defer></script>
+            <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-<!-- গুগল ইনিশিয়ালাইজেশন (সঠিক ক্লায়েন্ট আইডি সহ) -->
-<div id="g_id_onload"
-     data-client_id="9000291821490-r55nfoqn5c32afmqlhbbha4ebmq4r0a2.apps.googleusercontent.com"
-     data-callback="handleCredentialResponse"
-     data-auto_prompt="false">
-</div>
+            <div id="g_id_onload"
+                 data-client_id="90291821490-r55nfoqn5c32afmqlhbbha4ebmq4r0a2.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse"
+                 data-auto_prompt="false">
+            </div>
 
-<!-- গুগলের বাটন কন্টেইনার (লগইন বক্সের সাথে ম্যাচিং সাইজ) -->
-<div style="display: flex; justify-content: center; width: 100%; margin-top: 15px; padding: 0 10px;">
-    <div class="g_id_signin"
-         data-type="standard"
-         data-size="large"
-         data-theme="outline"
-         data-text="continue_with"
-         data-shape="rectangular"
-         data-logo_alignment="left"
-         data-width="320"> <!-- মোবাইলের স্ক্রিন অনুযায়ী পারফেক্ট সাইজ -->
-    </div>
-</div>
-        </div>
-        <!-- --------------------------------------- -->
-
-        <p style="font-size: 14px; color: #666; margin-top: 25px; text-align: center;">
+            <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px; padding: 0 10px; box-sizing: border-box;">
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-size="large"
+                     data-theme="outline"
+                     data-text="continue_with"
+                     data-shape="rectangular"
+                     data-logo_alignment="left"
+                     data-width="320">
+                </div>
+            </div>
+        </div> <p style="font-size: 14px; color: #666; margin-top: 25px; text-align: center; margin-bottom: 0;">
             New member? <a href="#" style="color: #ff0000; font-weight: 700; text-decoration: none;" onclick="switchAuth(true)">Register Now</a>
         </p>
-    </div>
-</div>
+
+    </div> </div>
+
+
 
 <script>
     /* লগইন পাসওয়ার্ড হাইড/শো করার ফাংশন */
@@ -2910,7 +2903,7 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             Register Now
         </button>
 
-        <div style="text-align: center; margin-top: 20px;">
+        <div style="text-align: center; margin-top: 25px;">
             <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
                 <div style="flex: 1; height: 1px; background: #eee;"></div>
                 <span style="padding: 0 15px; color: #999; font-size: 13px; font-weight: 500;">Or Connect With</span>
@@ -2919,28 +2912,29 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
 
             <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-            <div id="g_id_onload_signup"
-                 data-client_id="900291821490-r55nfoqn5c32afmqlhbbha4ebmq4r0a2.apps.googleusercontent.com"
+            <div id="g_id_onload"
+                 data-client_id="90291821490-r55nfoqn5c32afmqlhbbha4ebmq4r0a2.apps.googleusercontent.com"
                  data-callback="handleCredentialResponse"
                  data-auto_prompt="false">
             </div>
 
-            <div style="display: flex; justify-content: center; width: 100%;">
+            <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px; padding: 0 10px; box-sizing: border-box;">
                 <div class="g_id_signin"
                      data-type="standard"
                      data-size="large"
                      data-theme="outline"
-                     data-text="signup_with" data-shape="rectangular"
+                     data-text="signup_with" 
+                     data-shape="rectangular"
                      data-logo_alignment="left"
                      data-width="320">
                 </div>
             </div>
-        </div>
-        <p style="font-size: 14px; color: #666; margin-top: 25px; text-align: center;">
-            Already have an Account? <a href="#" style="color: #ff0000; font-weight: 700; text-decoration: none;" onclick="switchAuth(false)">Login</a>
+        </div> <p style="font-size: 14px; color: #666; margin-top: 25px; text-align: center; margin-bottom: 0;">
+            Already have an Account? <a href="#" style="color: #ff0000; font-weight: 700; text-decoration: none;" onclick="switchAuth(false)">Login now</a>
         </p>
-    </div>
-</div>
+
+    </div> </div>
+
 
 <script>
 function toggleSignupPassword() {
