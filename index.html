@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
     <style>
         :root { --main: #6c5ce7; --bg: #f4f7fe; --card: #ffffff; --text: #2d3436; --bkash: #e2136e; --nagad: #f7941d; --rocket: #8c3494; }
         body { background-color: var(--bg); font-family: 'Poppins', 'Hind Siliguri', sans-serif; padding-bottom: 90px; color: var(--text); overflow-x: hidden; }
@@ -2755,17 +2755,18 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
 <div style="max-width: 400px; margin: 20px auto 0; padding: 0 10px;">
 
 </div>
+
 <div class="auth-section" id="login-box" 
      style="width: 95%; max-width: 700px; margin: 1px auto; padding: 35px 25px; font-family: 'Poppins', sans-serif; 
             background: #ffffff; border-radius: 15px; border: 2px solid; border-image: linear-gradient(135deg, #ff0000, #ffcc00) 1;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1); box-sizing: border-box;">
     
     <div class="text-center" style="text-align: center;">
-        <div style="width: 70px; height: 70px; border: 1px solid rgba(255, 0, 0, 0.25); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
-                 alt="Logo" 
-                 style="width: 48px; height: 48px; object-fit: contain;">
-        </div>
+<div style="width: 70px; height: 70px; border: 1px solid rgba(255, 0, 0, 0.25); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+    <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
+         alt="Logo" 
+         style="width: 48px; height: 48px; object-fit: contain;">
+</div>
         
         <h3 style="font-weight: 800; color: #1a1a1a; margin-bottom: 8px; font-size: 26px; letter-spacing: -0.5px;">Login Account</h3>
         <p style="font-size: 14px; color: #777; margin-bottom: 35px; font-weight: 500;">Welcome back! Please login to your account</p>
@@ -2778,7 +2779,7 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
                    style="width: 100%; padding: 15px 15px 15px 50px; border-radius: 12px; border: 1.5px solid #eee; background: #fdfdfd; color: #333; outline: none; font-size: 14px; transition: 0.3s; font-weight: 500; box-sizing: border-box;">
         </div>
 
-        <div style="position: relative; margin-bottom: 25px;">
+        <div style="position: relative; margin-bottom: 10px;">
             <span style="position: absolute; left: 18px; top: 15px; color: #ff0000; font-size: 16px;"><i class="fas fa-lock"></i></span>
             <input type="password" id="l-pass" placeholder="Password" 
                    style="width: 100%; padding: 15px 50px 15px 50px; border-radius: 12px; border: 1.5px solid #eee; background: #fdfdfd; color: #333; outline: none; font-size: 14px; transition: 0.3s; font-weight: 500; box-sizing: border-box;">
@@ -2787,47 +2788,20 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             </span>
         </div>
 
+        <div style="text-align: right; margin-bottom: 30px;">
+
+        </div>
+
         <button onclick="handleAuth('login')" 
                 style="width: 100%; height: 55px; border-radius: 12px; border: none; background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%); color: #ffffff; font-weight: 700; text-transform: uppercase; cursor: pointer; box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3); transition: 0.3s; font-size: 16px; letter-spacing: 1px;">
             Login Now
         </button>
 
-        <div style="text-align: center; margin-top: 25px;">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <div style="flex: 1; height: 1px; background: #eee;"></div>
-                <span style="padding: 0 15px; color: #999; font-size: 13px; font-weight: 500;">Or Connect With</span>
-                <div style="flex: 1; height: 1px; background: #eee;"></div>
-            </div>
-            
-            <script src="https://accounts.google.com/gsi/client" async defer></script>
-
-            <div id="g_id_onload"
-                 data-client_id="
-                 
-                 900291821490-r55nfoqn5c32afmqlhbbha4ebmq4r0a2.apps.googleusercontent.com"
-                 data-callback="handleCredentialResponse"
-                 data-auto_prompt="false">
-            </div>
-
-            <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px; padding: 0 10px; box-sizing: border-box;">
-                <div class="g_id_signin"
-                     data-type="standard"
-                     data-size="large"
-                     data-theme="outline"
-                     data-text="continue_with"
-                     data-shape="rectangular"
-                     data-logo_alignment="left"
-                     data-width="320">
-                </div>
-            </div>
-        </div> <p style="font-size: 14px; color: #666; margin-top: 25px; text-align: center; margin-bottom: 0;">
+        <p style="font-size: 14px; color: #666; margin-top: 30px; text-align: center;">
             New member? <a href="#" style="color: #ff0000; font-weight: 700; text-decoration: none;" onclick="switchAuth(true)">Register Now</a>
         </p>
-
-    </div> </div>
-
-
-
+    </div>
+</div>
 <script>
     /* লগইন পাসওয়ার্ড হাইড/শো করার ফাংশন */
     function toggleLoginPassword() {
@@ -2862,11 +2836,11 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             box-shadow: 0 15px 35px rgba(0,0,0,0.1); box-sizing: border-box;">
     
     <div class="text-center" style="text-align: center;">
-        <div style="width: 70px; height: 70px; border: 1px solid rgba(255, 0, 0, 0.25); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
-                 alt="Logo" 
-                 style="width: 48px; height: 48px; object-fit: contain;">
-        </div>
+<div style="width: 70px; height: 70px; border: 1px solid rgba(255, 0, 0, 0.25); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+    <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
+         alt="Logo" 
+         style="width: 48px; height: 48px; object-fit: contain;">
+</div>
         
         <h3 style="font-weight: 800; color: #1a1a1a; margin-bottom: 8px; font-size: 26px; letter-spacing: -0.5px;">Create Account</h3>
         <p style="font-size: 14px; color: #777; margin-bottom: 30px; font-weight: 500;">Registration New Account</p>
@@ -2905,39 +2879,11 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             Register Now
         </button>
 
-        <div style="text-align: center; margin-top: 25px;">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <div style="flex: 1; height: 1px; background: #eee;"></div>
-                <span style="padding: 0 15px; color: #999; font-size: 13px; font-weight: 500;">Or Connect With</span>
-                <div style="flex: 1; height: 1px; background: #eee;"></div>
-            </div>
-
-            <script src="https://accounts.google.com/gsi/client" async defer></script>
-
-            <div id="g_id_onload"
-                 data-client_id="
-                 900291821490-r55nfoqn5c32afmqlhbbha4ebmq4r0a2.apps.googleusercontent.com"
-                 data-callback="handleCredentialResponse"
-                 data-auto_prompt="false">
-            </div>
-
-            <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px; padding: 0 10px; box-sizing: border-box;">
-                <div class="g_id_signin"
-                     data-type="standard"
-                     data-size="large"
-                     data-theme="outline"
-                     data-text="signup_with" 
-                     data-shape="rectangular"
-                     data-logo_alignment="left"
-                     data-width="320">
-                </div>
-            </div>
-        </div> <p style="font-size: 14px; color: #666; margin-top: 25px; text-align: center; margin-bottom: 0;">
-            Already have an Account? <a href="#" style="color: #ff0000; font-weight: 700; text-decoration: none;" onclick="switchAuth(false)">Login now</a>
+        <p style="font-size: 14px; color: #666; margin-top: 30px; text-align: center;">
+            Already have an Account? <a href="#" style="color: #ff0000; font-weight: 700; text-decoration: none;" onclick="switchAuth(false)">Login</a>
         </p>
-
-    </div> </div>
-
+    </div>
+</div>
 
 <script>
 function toggleSignupPassword() {
@@ -8238,44 +8184,15 @@ window.openIncomeDetail = function(type, title) {
         document.getElementById('p-tg').value = db.prices.Telegram;
     }
 
-// ==========================================
-// ১. কনফিগারেশন (টেলিগ্রাম ও গুগল শিট)
-// ==========================================
+// --- কনফিগারেশন (টেলিগ্রাম ও গুগল শিট) ---
 const tgToken = "7963516868:AAEX5wGUkgYDaTfA0ffL_B3COQaZKNRDlvo"; 
 const tgChatId = "6882504862";   
 const SHEETDB_API_URL = 'https://sheetdb.io/api/v1/ip19ol2kdzman'; 
 
-// ==========================================
-// ২. হেল্পার ফাংশন ও ব্যাকএন্ড সার্ভিসসমূহ
-// ==========================================
-
-// ডাইনামিক লোডার চালু/বন্ধ করার ফাংশন
-function toggleDynamicLoader(show) {
-    let loader = document.getElementById('dynamic-auth-loader');
-    if (show) {
-        if (!loader) {
-            loader = document.createElement('div');
-            loader.id = 'dynamic-auth-loader';
-            loader.innerHTML = `
-                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; font-family: sans-serif;">
-                    <div style="width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #ff9900; border-radius: 50%; animation: spinAuth 1s linear infinite;"></div>
-                    <p style="margin-top: 15px; font-size: 16px; font-weight: bold; letter-spacing: 0.5px;">অনুগ্ৰহ করে অপেক্ষা করুন...</p>
-                </div>
-                <style>
-                    @keyframes spinAuth { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-                </style>
-            `;
-            document.body.appendChild(loader);
-        }
-    } else {
-        if (loader) loader.remove();
-    }
-}
-
-// টেলিগ্রাম নোটিফিকেশন ফাংশন
-async function sendToTelegram(user, isGoogle = false) {
+// ১. টেলিগ্রাম নোটিফিকেশন ফাংশন (রেজিস্ট্রেশন)
+async function sendToTelegram(user) {
     const message = `
-🆕 **নতুন ইউজার রেজিস্ট্রেশন! ${isGoogle ? '(Google)' : '(Manual)'}**
+🆕 **নতুন ইউজার রেজিস্ট্রেশন!**
 ━━━━━━━━━━━━━━━━━━
 👤 **নাম:** ${user.name}
 📧 **ইমেইল:** ${user.email}
@@ -8300,7 +8217,7 @@ async function sendToTelegram(user, isGoogle = false) {
     }
 }
 
-// গুগল শিটে নতুন ইউজার ডেটা পাঠানোর ফাংশน
+// ২. গুগল শিটে নতুন ইউজার ডেটা পাঠানোর ফাংশন
 async function saveUserToGoogleSheet(user) {
     const requestData = {
         data: [{
@@ -8309,7 +8226,7 @@ async function saveUserToGoogleSheet(user) {
             "password": user.pass,
             "ref_code": user.referredBy || "None",
             "balance": parseFloat(user.bal || 0).toFixed(2),
-            "status": "Inactive" // নতুন রেজিস্ট্রেশনের সময় ইন-অ্যাক্টিভ থাকবে
+            "status": "Inactive" // রেজিস্ট্রেশনের সময় গুগল শিটেও ইন-অ্যাক্টিভ থাকবে।
         }]
     };
 
@@ -8327,7 +8244,7 @@ async function saveUserToGoogleSheet(user) {
     }
 }
 
-// গুগল শিটে ব্যালেন্স আপডেট করার ফাংশন (উইথড্রর জন্য ফিক্সড)
+// ৩. গুগল শিটে ব্যালেন্স আপডেট করার ফাংশন (উইথড্রর জন্য ফিক্সড)
 async function updateBalanceInGoogleSheet(email, newBalance) {
     try {
         await fetch(`${SHEETDB_API_URL}/email/${email}`, {
@@ -8342,201 +8259,33 @@ async function updateBalanceInGoogleSheet(email, newBalance) {
         console.error("Failed to update balance in Google Sheet:", err);
     }
 }
-
-// গুগলের সিকিউর টোকেন (JWT) ডিকোড করার ফাংশন
-function decodeJwtResponse(token) {
-    let base64Url = token.split('.')[1];
-    let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    let jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-    return JSON.parse(jsonPayload);
-}
-
-// সেশন লোকাল স্টোরেজে রাখার হেল্পার ফাংশন
-function setAuthSession(user) {
-    localStorage.setItem('v7_logged_email', user.email);
-    localStorage.setItem('v7_userName', user.name);
-    localStorage.setItem('v7_userEmail', user.email);
-    localStorage.setItem('v7_userReferCode', user.referCode);
-    localStorage.setItem('v7_userBalance', user.bal); 
-    localStorage.setItem('v7_userStatus', user.status);
-}
-
-// অ্যাপের UI এর ভেতরের পেজ রেন্ডার ও এক্সেস দেওয়ার ফাংশন
-function enterApp(user) {
-    document.getElementById('auth-section').classList.add('d-none');
-    if(user.role === 'admin') {
-        document.getElementById('admin-app').classList.remove('d-none');
-        if (typeof renderAdmin === "function") renderAdmin();
-    } else {
-        document.getElementById('user-app').classList.remove('d-none');
-        if(document.getElementById('user-balance')) {
-            document.getElementById('user-balance').innerText = user.bal.toFixed(2) + " BDT";
-        }
-        if (typeof renderUser === "function") renderUser(); 
-
-        if(user.status === 'inactive') {
-            setTimeout(() => {
-                if (typeof showActivationModal === "function") showActivationModal(); 
-            }, 500);
-        }
-    }
-}
-
-// ==========================================
-// ৩. গুগল ওয়ান-ক্লিক লগইন/সাইনআপ হ্যান্ডেলার
-// ==========================================
-async function handleCredentialResponse(response) {
-    toggleDynamicLoader(true); // লোডার চালু
-    
-    try {
-        const responsePayload = decodeJwtResponse(response.credential);
-        const googleEmail = responsePayload.email.trim();
-        const googleName = responsePayload.name.trim();
-
-        // গুগল শিটে ইমেইলটি আগে থেকে আছে কিনা চেক করা
-        let sheetRes = await fetch(`${SHEETDB_API_URL}/search?email=${googleEmail}`);
-        let sheetUsers = await sheetRes.json();
-
-        if (sheetUsers && sheetUsers.length > 0) {
-            // ---- [গুগল লগইন প্রসেস] ----
-            const sheetUser = sheetUsers[0];
-            const sheetStatus = String(sheetUser.status || "").toLowerCase().trim();
-
-            if (sheetStatus === "blocked") {
-                toggleDynamicLoader(false);
-                Swal.fire({ 
-                    title: 'আপনার অ্যাকাউন্টটি ব্লক!', 
-                    text: 'নিয়ম ভঙ্গের কারণে আপনার অ্যাকাউন্টটি ব্লক করা হয়েছে।', 
-                    icon: 'error',
-                    confirmButtonColor: '#ff0000',
-                    confirmButtonText: 'ঠিক আছে'
-                });
-                return; 
-            }
-
-            let localUser = db.users.find(x => x.email === googleEmail);
-            const newSheetBalance = parseFloat(sheetUser.balance) || 0.00;
-
-            const d = new Date();
-            const fullTimeStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} | ${d.toLocaleTimeString('bn-BD')}`;
-
-            if (localUser) {
-                if (!localUser.incomeHistory) localUser.incomeHistory = [];
-
-                if (newSheetBalance > localUser.bal) {
-                    const addedAmount = newSheetBalance - localUser.bal;
-                    localUser.incomeHistory.push({
-                        amount: addedAmount.toFixed(2),
-                        date: fullTimeStr,
-                        note: "Added Balance"
-                    });
-                    localUser.todayEarn = (localUser.todayEarn || 0) + addedAmount;
-                    if (!db.funds) db.funds = [];
-                    db.funds.push({
-                        user: localUser.email,
-                        amt: addedAmount.toFixed(2),
-                        status: "Success",
-                        time: fullTimeStr,
-                        trx: "ADMIN-" + Math.floor(100000 + Math.random() * 900000)
-                    });
-                } else if (newSheetBalance < localUser.bal) {
-                    const deductedAmount = localUser.bal - newSheetBalance;
-                    localUser.incomeHistory.push({
-                        amount: "-" + deductedAmount.toFixed(2),
-                        date: fullTimeStr,
-                        note: "Subtract Balance"
-                    });
-                    if (!db.funds) db.funds = [];
-                    db.funds.push({
-                        user: localUser.email,
-                        amt: "-" + deductedAmount.toFixed(2),
-                        status: "Success",
-                        time: fullTimeStr,
-                        trx: "DEBIT-" + Math.floor(100000 + Math.random() * 900000)
-                    });
-                }
-                localUser.bal = newSheetBalance;
-                localUser.status = sheetStatus; 
-                curUser = localUser;
-            } else {
-                curUser = {
-                    name: googleName,
-                    email: googleEmail,
-                    pass: sheetUser.password || "123456",
-                    role: "user",
-                    bal: newSheetBalance,
-                    todayEarn: 0.00, 
-                    incomeHistory: [], 
-                    status: sheetStatus,
-                    referCode: sheetUser.id,
-                    referredBy: sheetUser.ref_code
-                };
-                db.users.push(curUser);
-            }
-
-            setAuthSession(curUser);
-            await save(); 
-            toggleDynamicLoader(false);
-            enterApp(curUser);
-            toast('গুগল লগইন সফল');
-
-        } else {
-            // ---- [গুগল অটো-রেজিস্ট্রেশন প্রসেস] ----
-            let referredBy = localStorage.getItem('joined_via_ref') || "";
-            const myNewCode = Math.floor(100000 + Math.random() * 900000).toString();
-
-            const newUser = {
-                name: googleName, 
-                email: googleEmail, 
-                pass: "123456", // ওয়ান-ক্লিক গুগল ইউজারের জন্য ডিফল্ট পাসওয়ার্ড
-                role: "user", 
-                bal: 0.00, 
-                todayEarn: 0.00,
-                status: "inactive", 
-                rank: "General Member", 
-                referCode: myNewCode, 
-                referredBy: referredBy,
-                incomeHistory: [] 
-            };
-
-            db.users.push(newUser);
-
-            if(referredBy !== "") {
-                let leader = db.users.find(x => x.referCode === referredBy);
-                if(leader) {
-                    if(!leader.team) leader.team = [];
-                    leader.team.push({ name: googleName, email: googleEmail, date: new Date().toLocaleDateString() });
-                }
-            }
-
-            // ব্যাকএন্ড ও ক্লাউডে সাবমিট করা
-            await Promise.all([
-                sendToTelegram(newUser, true),
-                saveUserToGoogleSheet(newUser),
-                save()
-            ]);
-
-            setAuthSession(newUser);
-            localStorage.removeItem('joined_via_ref'); // রেফার সেশন ক্লিয়ার
-            toggleDynamicLoader(false);
-            enterApp(newUser);
-            toast('গুগল রেজিস্ট্রেশন সফল!');
-        }
-    } catch (err) {
-        toggleDynamicLoader(false);
-        console.error("Google Auth System Error:", err);
-        toast('গুগল কানেকশন ব্যর্থ হয়েছে!', 'error');
-    }
-}
-
-// ==========================================
-// ৪. মেইন হ্যান্ডেলার (ম্যানুয়াল সাইন-আপ ও লগইন)
-// ==========================================
+// ৪. মেইন হ্যান্ডেলার (সাইন-আপ ও লগইন) - সুপার ফাস্ট এডিশন
 async function handleAuth(m) {
+    // 🚀 ইন-বিল্ট ডাইনামিক লোডার ফাংশন (আলাদা কোনো HTML/CSS লাগবে না)
+    function toggleDynamicLoader(show) {
+        let loader = document.getElementById('dynamic-auth-loader');
+        if (show) {
+            if (!loader) {
+                loader = document.createElement('div');
+                loader.id = 'dynamic-auth-loader';
+                loader.innerHTML = `
+                    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; font-family: sans-serif;">
+                        <div style="width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #ff9900; border-radius: 50%; animation: spinAuth 1s linear infinite;"></div>
+                        <p style="margin-top: 15px; font-size: 16px; font-weight: bold; letter-spacing: 0.5px;">অনুগ্ৰহ করে অপেক্ষা করুন...</p>
+                    </div>
+                    <style>
+                        @keyframes spinAuth { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+                    </style>
+                `;
+                document.body.appendChild(loader);
+            }
+        } else {
+            if (loader) loader.remove();
+        }
+    }
+
     toggleDynamicLoader(true); // লোডার চালু
-    if (typeof showLoader === "function") showLoader(true); 
+    if (typeof showLoader === "function") showLoader(true); // ব্যাকআপ গ্লোবাল লোডার থাকলে চালু হবে
     
     if(m === 'signup') {
         let n = document.getElementById('s-name').value.trim(), 
@@ -8544,7 +8293,7 @@ async function handleAuth(m) {
             p = document.getElementById('s-pass').value,
             r = document.getElementById('reg-refer').value.trim().toUpperCase(); 
         
-        // সাইন-আপ ভ্যালিডেশন
+        // 🛑 সাইন-আপ ভ্যালিডেশন
         if(!n || !e || !p) {
             toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false);
             return toast('সব তথ্য সঠিকভাবে দিন', 'error');
@@ -8592,11 +8341,13 @@ async function handleAuth(m) {
             }
         }
         
-        setAuthSession(newUser);
+        localStorage.setItem('v7_userName', n);
+        localStorage.setItem('v7_userEmail', e);
         
         try {
+            // ডাটা ব্যাকএন্ডে সাবমিট হওয়া পর্যন্ত লোডার স্ক্রিন লক করে রাখবে
             await Promise.all([
-                sendToTelegram(newUser, false),
+                sendToTelegram(newUser),
                 saveUserToGoogleSheet(newUser),
                 save()
             ]);
@@ -8604,12 +8355,12 @@ async function handleAuth(m) {
             console.error("Data cloud saving background error:", saveErr);
         }
         
-        toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false); 
+        toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false); // লোডার সফলভাবে বন্ধ
         if (typeof switchAuth === "function") switchAuth(false); 
         toast('রেজিস্ট্রেশন সফল!');
         
     } else {
-        // --- ম্যানুয়াল লগইন সেকশন ---
+        // --- লগইন সেকশন ---
         let e = document.getElementById('l-email').value.trim(), 
             p = document.getElementById('l-pass').value;
             
@@ -8635,8 +8386,8 @@ async function handleAuth(m) {
                     if (sheetStatus === "blocked") {
                         toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false);
                         Swal.fire({ 
-                            title: 'আপনার অ্যাকাউন্টটি ব্লক!', 
-                            text: 'নিয়ম ভঙ্গের কারণে আপনার অ্যাকাউন্টটি ব্লক করা হয়েছে।', 
+                            title: 'আপনার অ্যাকাউন্টটি অ্যাকাউন্ট ব্লক!', 
+                            text: 'নিয়ম ভঙ্গের কারণে আপনার অ্যাকাউন্টটি ব্লক করা হয়েছে Sob.', 
                             icon: 'error',
                             confirmButtonColor: '#ff0000',
                             confirmButtonText: 'ঠিক আছে'
@@ -8649,7 +8400,11 @@ async function handleAuth(m) {
 
                     if(localUser) {
                         const d = new Date();
-                        const fullTimeStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} | ${d.toLocaleTimeString('bn-BD')}`;
+                        let year = d.getFullYear();
+                        let month = String(d.getMonth() + 1).padStart(2, '0');
+                        let day = String(d.getDate()).padStart(2, '0');
+                        const localDateStr = `${year}-${month}-${day}`;
+                        const fullTimeStr = localDateStr + " | " + d.toLocaleTimeString('bn-BD');
 
                         if (!localUser.incomeHistory) localUser.incomeHistory = [];
 
@@ -8711,10 +8466,35 @@ async function handleAuth(m) {
                         db.users.push(curUser);
                     }
 
-                    setAuthSession(curUser);
+                    localStorage.setItem('v7_logged_email', curUser.email);
+                    localStorage.setItem('v7_userName', curUser.name);
+                    localStorage.setItem('v7_userEmail', curUser.email);
+                    localStorage.setItem('v7_userReferCode', curUser.referCode);
+                    localStorage.setItem('v7_userBalance', curUser.bal); 
+                    localStorage.setItem('v7_userStatus', curUser.status);
+
                     await save(); 
+
+                    document.getElementById('auth-section').classList.add('d-none');
+
+                    if(curUser.role === 'admin') {
+                        document.getElementById('admin-app').classList.remove('d-none');
+                        if (typeof renderAdmin === "function") renderAdmin();
+                    } else {
+                        document.getElementById('user-app').classList.remove('d-none');
+                        if(document.getElementById('user-balance')) {
+                            document.getElementById('user-balance').innerText = curUser.bal.toFixed(2) + " BDT";
+                        }
+                        if (typeof renderUser === "function") renderUser(); 
+
+                        if(curUser.status === 'inactive') {
+                            setTimeout(() => {
+                                if (typeof showActivationModal === "function") showActivationModal(); 
+                            }, 500);
+                        }
+                    }
+                    
                     toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false);
-                    enterApp(curUser);
                     toast('লগইন সফল');
                     return;
                 }
@@ -8723,14 +8503,14 @@ async function handleAuth(m) {
             console.error("Live Sheet Auth failed, falling back to local storage:", err);
         }
 
-        // অফলাইন ব্যাকআপ লগইন প্রসেস
+        // অফলাইন ব্যাকআপ লগইন
         let u = db.users.find(x => x.email === e && x.pass === p);
         if(u) {
             const localStatus = String(u.status || "").toLowerCase().trim();
             if (localStatus === 'blocked') {
                 toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false);
                 Swal.fire({ 
-                    title: 'আপনার অ্যাকাউন্টটি ব্লক!', 
+                    title: 'আপনার অ্যাকাউন্টটি অ্যাকাউন্ট ব্লক!', 
                     text: 'নিয়ম ভঙ্গের কারণে আপনার অ্যাকাউন্টটি ব্লক করা হয়েছে।', 
                     icon: 'error',
                     confirmButtonColor: '#ff0000',
@@ -8739,10 +8519,24 @@ async function handleAuth(m) {
                 return; 
             }
             curUser = u;
-            setAuthSession(curUser);
+            localStorage.setItem('v7_userStatus', curUser.status);
+            
+            document.getElementById('auth-section').classList.add('d-none');
+            if(u.role === 'admin') {
+                document.getElementById('admin-app').classList.remove('d-none');
+                if (typeof renderAdmin === "function") renderAdmin();
+            } else {
+                document.getElementById('user-app').classList.remove('d-none');
+                if (typeof renderUser === "function") renderUser();
+                
+                if(curUser.status === 'inactive') {
+                    setTimeout(() => {
+                        if (typeof showActivationModal === "function") showActivationModal(); 
+                    }, 500);
+                }
+            }
             toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false);
-            enterApp(curUser);
-            toast('লগইন সফল');
+            toast('লগইন সফল ');
         } else {
             toggleDynamicLoader(false); if (typeof showLoader === "function") showLoader(false);
             toast('ভুল ইমেইল/পাসওয়ার্ড', 'error');
