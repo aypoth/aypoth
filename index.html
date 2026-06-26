@@ -6873,7 +6873,7 @@ function updateLiveCalculation() {
     <div class="container mt-3">
         <div style="background: #fff5f5; border-radius: 15px; padding: 12px; border-left: 5px solid #ff3838; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(255,56,56,0.05);">
             <p style="margin: 0; font-size: 12px; color: #c0392b; font-weight: 600;">
-                <i class="fas fa-bullhorn me-2"></i> নোটিশ: প্রতিটি কাজ সঠিকভাবে সম্পন্ন করুন। মিনিমাম ১০০ টাকা হলে মেইন ব্যালেন্সে ট্রান্সফার করতে পারবেন। এবং কাজ গুলোর পেমেন্ট নিশ্চিত করতে অবশ্যই লগইন পেজ থেকে App ইন্সটল করে কাজ করবেন,,তাছাড়া বেলেন্স তুলতে পারবেন না। বেআইনি ভাবে কাজ করলে একাউন্ট সাসপেন্ড হবে ✅
+                <i class="fas fa-bullhorn me-2"></i> নোটিশ: প্রতিটি কাজ সঠিকভাবে সম্পন্ন করুন। মিনিমাম ১০০ টাকা হলে মেইন ব্যালেন্সে ট্রান্সফার করতে পারবেন। এবং কাজ গুলোর পেমেন্ট নিশ্চিত করতে অবশ্যই লগইন পেজ থেকে App ইন্সটল করে কাজ করবেন,,তাছাড়া বেলেন্স তুলতে পারবেন না। বেআইনি ভাবে কাজ করলে একাউนต์ সাসপেন্ড হবে ✅
             </p>
         </div>
 
@@ -6905,7 +6905,7 @@ function updateLiveCalculation() {
         
         <h6 style="font-weight: 800; margin-bottom: 18px; color: #1e293b; font-size: 15px;" id="modal-job-name">টাস্ক সম্পন্ন করুন</h6>
         
-        <a id="modal-work-link" href="#" target="_blank" style="display: block; text-align: center; background: #fff5f5; color: #ff3838; text-decoration: none; padding: 12px; border-radius: 12px; font-weight: 700; margin-bottom: 18px; border: 1px solid rgba(255,56,56,0.2); font-size: 14px; transition: 0.2s;">
+        <a id="modal-work-link" href="#" target="_blank" onclick="trackLinkClick()" style="display: block; text-align: center; background: #fff5f5; color: #ff3838; text-decoration: none; padding: 12px; border-radius: 12px; font-weight: 700; margin-bottom: 18px; border: 1px solid rgba(255,56,56,0.2); font-size: 14px; transition: 0.2s;">
             <i class="fas fa-external-link-alt me-2"></i> কাজের লিংকে যান
         </a>
         
@@ -6913,11 +6913,15 @@ function updateLiveCalculation() {
     </div>
 </div>
 
+<div id="custom-toast-container" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); z-index: 9999; background: #10b981; color: white; padding: 14px 24px; border-radius: 16px; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3); display: flex; align-items: center; gap: 10px; font-family: sans-serif; font-size: 15px; font-weight: 600; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 0; pointer-events: none;">
+    <i id="custom-toast-icon" class="fas fa-check-circle" style="font-size: 18px;"></i>
+    <span id="custom-toast-text">টাস্ক সফলভাবে সম্পন্ন হয়েছে!</span>
+</div>
+
 <script>
 const TELEGRAM_BOT_TOKEN = '7963516868:AAEX5wGUkgYDaTfA0ffL_B3COQaZKNRDlvo'; 
 const TELEGRAM_CHAT_ID = '6882504862'; 
 
-// 📝 ঠিক করা জাভাস্ক্রিপ্ট ডেটা অ্যারে
 const jobsData = [
     { id: 1, name: "Facebook Follow", price: 0.10, link: "https://www.facebook.com/share/1Ebi1GdQE4/" },
     { id: 2, name: "Facebook Page Like", price: 0.10, link: "https://facebook.com/link2" },
@@ -6927,11 +6931,12 @@ const jobsData = [
     { id: 6, name: "TikTok Follow", price: 0.01, link: "https://tiktok.com" },
     { id: 7, name: "Instagram Follow", price: 0.04, link: "https://instagram.com" },
     { id: 8, name: "YouTube Subscribe 2", price: 0.08, link: "https://youtube.com/link8" },
-    { id: 9, name: "Facebook Post Share", price: 0.09, link: "https://facebook.com/link9" }, // এখানে ঠিক করা হয়েছে
+    { id: 9, name: "Facebook Post Share", price: 0.09, link: "https://facebook.com/link9" }, 
     { id: 10, name: "App Download & Review", price: 0.16, link: "https://play.google.com" }
 ];
 
 let currentActiveJob = null;
+let clickedLink = false; // লিংকে ক্লিক ট্র্যাকার ভ্যারিয়েবল
 
 function openMicroJobsPage() {
     document.getElementById('p-micro').style.display = 'block';
@@ -7005,6 +7010,7 @@ function openJobModal(jobId) {
     if (!job) return;
     
     currentActiveJob = job;
+    clickedLink = false; // মোডাল খোলার সময় ট্র্যাকার রিসেট করা হলো
     document.getElementById('modal-job-name').innerText = job.name;
     document.getElementById('modal-work-link').href = job.link;
     document.getElementById('jobModal').style.display = 'flex';
@@ -7013,11 +7019,44 @@ function openJobModal(jobId) {
 function closeJobModal() {
     document.getElementById('jobModal').style.display = 'none';
     currentActiveJob = null;
+    clickedLink = false;
+}
+
+// ইউজার লিংকে ক্লিক করলে এই ফাংশনটি রান হবে
+function trackLinkClick() {
+    clickedLink = true;
 }
 
 function instantSubmitJob() {
     if (!currentActiveJob) return;
 
+    const userEmail = localStorage.getItem('v7_userEmail') || localStorage.getItem('v7_logged_email') || "অজানা জিমেইল";
+
+    // 🔴 যদি ইউজার লিংকে ক্লিক না করে সাবমিট করতে চায়
+    if (!clickedLink) {
+        showModernPopup("আগে কাজের লিংকে গিয়ে কাজ সম্পন্ন করুন! Admin এর কাছে মেসেজ চলে গেছে আপনি অবৈধ কাজ করতে চেয়েছেন ✅", "error");
+        
+        // টেলিগ্রামে এডমিনকে অবৈধ কাজের অ্যালার্ট পাঠানো
+        const fraudAlertText = `⚠️ অবৈধ সাবমিট নোটিশ (Fraud Alert)!\n\n` +
+                               `📧 ইউজার জিমেইল: ${userEmail}\n` +
+                               `❌ টাস্কের নাম: ${currentActiveJob.name}\n` +
+                               `🔗 কাজের লিংক: ${currentActiveJob.link}\n` +
+                               `⏰ সময়: ${new Date().toLocaleString('bn-BD')}\n\n` +
+                               `❗ ইউজার কাজের লিংকে ক্লিক না করেই সাবমিট করার চেষ্টা করেছে।`;
+
+        fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: fraudAlertText
+            })
+        }).catch(err => console.error("Telegram error:", err));
+        
+        return; // এখানেই সাবমিট কোড আটকে দেওয়া হলো
+    }
+
+    // ✅ বৈধ কাজের ক্ষেত্রে সাবমিট প্রসেস
     let completedJobs = JSON.parse(localStorage.getItem('completed_jobs')) || [];
     if (!completedJobs.includes(currentActiveJob.id)) {
         completedJobs.push(currentActiveJob.id);
@@ -7034,10 +7073,35 @@ function instantSubmitJob() {
     renderJobs();
     updateStats();
     
-    if (typeof showPremiumToast === "function") {
-        showPremiumToast("টাস্ক সফলভাবে সম্পন্ন হয়েছে!", "success");
-    } else {
-        alert("টাস্ক সফলভাবে সম্পন্ন হয়েছে!");
+    showModernPopup("টাস্ক সফলভাবে সম্পন্ন হয়েছে!", "success");
+}
+
+// কাস্টম ডাইনামিক পপআপ ফাংশন (টাইপ অনুযায়ী কালার পরিবর্তন হবে)
+function showModernPopup(message, type = "success") {
+    const toast = document.getElementById('custom-toast-container');
+    const toastText = document.getElementById('custom-toast-text');
+    const toastIcon = document.getElementById('custom-toast-icon');
+    
+    if (toast && toastText && toastIcon) {
+        toastText.innerText = message;
+        
+        if (type === "success") {
+            toast.style.background = "#10b981"; // সবুজ কালার
+            toast.style.boxShadow = "0 10px 25px rgba(16, 185, 129, 0.3)";
+            toastIcon.className = "fas fa-check-circle";
+        } else {
+            toast.style.background = "#ef4444"; // লাল কালার
+            toast.style.boxShadow = "0 10px 25px rgba(239, 68, 68, 0.3)";
+            toastIcon.className = "fas fa-exclamation-circle";
+        }
+        
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+        toast.style.opacity = '1';
+        
+        setTimeout(() => {
+            toast.style.transform = 'translateX(-50%) translateY(-100px)';
+            toast.style.opacity = '0';
+        }, 3000);
     }
 }
 
@@ -7046,19 +7110,15 @@ function requestMicroTransfer() {
     const userEmail = localStorage.getItem('v7_userEmail') || localStorage.getItem('v7_logged_email') || "অজানা জিমেইল";
     
     if (microWallet < 100) {
-        if (typeof showPremiumToast === "function") {
-            showPremiumToast("দুঃখিত, মিনিমাম ১০০ টাকা হলে ট্রান্সফার করা যাবে!", "error");
-        } else {
-            alert("দুঃখিত, মিনিমাম ১০০ টাকা হলে ট্রান্সফার করা যাবে!");
-        }
+        showModernPopup("দুঃখিত, মিনিমাম ১০০ টাকা হলে ট্রান্সফার করা যাবে!", "error");
         return;
     }
     
-    const requestText = `💸 নতুন মাইক্রো জব ব্যালেন্স ট্রান্সফার রিকোয়েস্ট!\n\n` +
+    const requestText = `💸 নতুন মাইক্রো জব ব্যালেন্স ট্রান্সফার রিকোয়েস্ট!\n\n` +
                         `📧 ইউজারের জিমেইল: ${userEmail}\n` +
                         `💰 ট্রান্সফার অ্যামাউন্ট: ৳ ${microWallet.toFixed(2)}\n` +
-                        `⏰ রিকোয়েস্ট সময়: ${new Date().toLocaleString('bn-BD')}\n\n` +
-                        `⚠️ অনুগ্রহ করে এডমিন প্যানেল বা শিট চেক করে ব্যালেন্স মেইন ওয়ালেটে যোগ করে দিন।`;
+                        `⏰ রিকোয়েস্ট সময়: ${new Date().toLocaleString('bn-BD')}\n\n` +
+                        `⚠️ অনুগ্রহ করে এডমিন প্যানেল বা শিট চেক করে ব্যালেন্স মেইন ওয়ালেটে যোগ করে দিন।`;
 
     fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
@@ -7073,19 +7133,14 @@ function requestMicroTransfer() {
         if (data.ok) {
             localStorage.setItem('micro_wallet_balance', 0.00);
             updateStats();
-            
-            if (typeof showPremiumToast === "function") {
-                showPremiumToast("ট্রান্সফার রিকোয়েস্ট পাঠানো হয়েছে!", "success");
-            } else {
-                alert("ট্রান্সফার রিকোয়েস্ট সফলভাবে এডমিনের কাছে পাঠানো হয়েছে!");
-            }
+            showModernPopup("ট্রান্সফার রিকোয়েস্ট পাঠানো হয়েছে!", "success");
         } else {
-            alert("রিকোয়েস্ট পাঠাতে ব্যর্থ হয়েছে। কনফিগারেশন চেক করুন।");
+            showModernPopup("রিকোয়েস্ট পাঠাতে ব্যর্থ হয়েছে।", "error");
         }
     })
     .catch(err => {
         console.error(err);
-        alert("নেটওয়ার্ক সমস্যা হয়েছে!");
+        showModernPopup("নেটওয়ার্ক সমস্যা হয়েছে!", "error");
     });
 }
 
