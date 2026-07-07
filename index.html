@@ -8279,6 +8279,21 @@ async function saveUserToGoogleSheet(user) {
         console.error("Google Sheet Saving Failed:", err);
     }
 }
+// ৪. গুগল শিটে স্ট্যাটাস আপডেট করার ফাংশন
+async function updateStatusInGoogleSheet(email, newStatus) {
+    try {
+        await fetch(`${SHEETDB_API_URL}/email/${email}`, {
+            method: 'PATCH', // বা PUT
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                data: { "status": newStatus }
+            })
+        });
+        console.log("Status updated in Google Sheet to: " + newStatus);
+    } catch (err) {
+        console.error("Failed to update status in Google Sheet:", err);
+    }
+}
 
 // ৩. গুগল শিটে ব্যালেন্স আপডেট করার ফাংশন (উইথড্রর জন্য ফিক্সড)
 async function updateBalanceInGoogleSheet(email, newBalance) {
@@ -8579,6 +8594,7 @@ async function handleAuth(m) {
         }
     }
 }
+
 
 // ৫. উইথড্র এক্সিকিউশন ফাংশন (গুগল শিট ব্যালেন্স সিঙ্কসহ)
 function executeWithdraw(amt, finalAmount, num, method, withdrawPage) {
@@ -12733,6 +12749,7 @@ function closeUserPopup() {
     const modal = document.getElementById('userModal');
     if(modal) modal.remove();
 }
+
 async function activateAccountNow() {
     if (!curUser) return;
 
@@ -12748,8 +12765,8 @@ async function activateAccountNow() {
                     <div style="display: flex; align-items: flex-start; gap: 10px; background: #fff5f5; padding: 8px; border-radius: 8px; border-left: 3px solid #ff0000;">
                         <span>💰</span> <span><b>হাই-কমিশন রেফার:</b> প্রতি সফল রেফারে সরাসরি ৳50 ইনস্ট্যান্ট বোনাস আরো থাকছে ৫ জেনারেশন রেফার কমিশন।</span>
                     </div>
-                                        <div style="display: flex; align-items: flex-start; gap: 10px; background: #fff5f5; padding: 8px; border-radius: 8px; border-left: 3px solid #ff0000;">
-                        <span>⚡</span> <span><b>ফাস্ট পেমেন্ট:</b> উইথড্র দেওয়ার মাত্র ১ ঘণ্টার মধ্যে পেমেন্ট নিশ্চিত।</span>
+                    <div style="display: flex; align-items: flex-start; gap: 10px; background: #fff5f5; padding: 8px; border-radius: 8px; border-left: 3px solid #ff0000;">
+                        <span>⚡</span> <span><b>ফাস্ট পেমেন্ট:</b> উইথড্র দেওয়ার মাত্র ১ ঘণ্টার মধ্যে পেমেন্ট নিশ্চিত।</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 10px; background: #fff5f5; padding: 8px; border-radius: 8px; border-left: 3px solid #ff0000;">
                         <span>💎</span> <span><b>লাইফটাইম এক্সেস:</b> একবার একটিভ করলে আর কখনোই রিনিউ করতে হবে না।</span>
@@ -12781,6 +12798,22 @@ async function activateAccountNow() {
                 let now = new Date();
                 let dateStr = now.toISOString().split('T')[0] + ' | ' + now.toLocaleTimeString();
 
+                // গুগল শিটে আপডেট পাঠানোর ফাংশন (API Call)
+                try {
+                    await fetch(`${SHEETDB_API_URL}/email/${curUser.email}`, {
+                        method: 'PATCH',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            data: { 
+                                "balance": curUser.bal,
+                                "status": "active" 
+                            }
+                        })
+                    });
+                } catch (err) {
+                    console.error("Sheet Update Failed:", err);
+                }
+
                 // ২. ৫ জেনারেশন কমিশন ডিস্ট্রিবিউশন
                 const commissions = [50, 15, 5, 5, 5]; 
                 let currentLeaderCode = curUser.referredBy;
@@ -12802,14 +12835,16 @@ async function activateAccountNow() {
                             date: dateStr
                         });
 
-                        // পরের জেনারেশনে যাওয়ার জন্য লিডারের লিডারকে সেট করা
+                        // লিডারের ব্যালেন্সও শিটে আপডেট করা (অপশনাল কিন্তু জরুরি)
+                        // আপনি চাইলে এখানে আপডেট ব্যালেন্স ফাংশনটি কল করতে পারেন
+                        
                         currentLeaderCode = leader.referredBy;
                     } else {
                         break; 
                     }
                 }
 
-                save(); 
+                await save(); 
                 renderUser(); 
 
                 // ৩. প্রফেশনাল সাকসেস পপআপ
@@ -12818,7 +12853,7 @@ async function activateAccountNow() {
                     width: '360px',
                     background: '#ffffff',
                     showConfirmButton: true,
-                    confirmButtonText: 'ড্যাশবোর্ডে যান',
+                    confirmButtonText: 'হোমপেজে যান',
                     confirmButtonColor: '#ff0000',
                     allowOutsideClick: false,
                     customClass: { popup: 'premium-success-popup' },
@@ -12834,7 +12869,7 @@ async function activateAccountNow() {
                             </div>
                             <div class="vip-badge">PREMIUM MEMBER</div>
                             <h3 style="color: #1a1a1a; font-weight: 900; font-size: 22px; margin-bottom: 10px;">অভিনন্দন, ${curUser.name.split(' ')[0]}!</h3>
-                            <p style="color: #666; font-size: 13px; line-height: 1.5;">আপনার একাউন্টটি সফলভাবে <b>১০০৳</b> এর বিনিময়ে প্রিমিয়াম করা হয়েছে। আপনি এখন ভিআইপি মেম্বার!</p>
+                            <p style="color: #666; font-size: 13px; line-height: 1.5;">আপনার একাউন্টটি সফলভাবে <b>১০০৳</b> এর বিনিময়ে প্রিমিয়াম করা হয়েছে। আপনি এখন ভিআইপি মেম্বার!</p>
                             <div style="background: #f8f9fa; border-radius: 20px; padding: 15px; margin-top: 20px; text-align: left;">
                                 <div class="benefit-item"><i class="fas fa-check-circle" style="color: #2ecc71;"></i> <span>৫-লেভেল রেফার কমিশন একটিভ</span></div>
                                 <div class="benefit-item"><i class="fas fa-check-circle" style="color: #2ecc71;"></i> <span>আনলিমিটেড মাইক্রো জবস</span></div>
@@ -12854,6 +12889,8 @@ async function activateAccountNow() {
         }
     });
 }
+
+
 function handleMicroJobClick() {
     // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
