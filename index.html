@@ -2783,11 +2783,11 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             box-shadow: 0 15px 35px rgba(0,0,0,0.1); box-sizing: border-box;">
     
     <div class="text-center" style="text-align: center;">
-        <div style="width: 70px; height: 70px; border: 1px solid rgba(255, 0, 0, 0.25); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
-                 alt="Logo" 
-                 style="width: 48px; height: 48px; object-fit: contain;">
-        </div>
+<div style="width: 75px; height: 75px; background: linear-gradient(135deg, #ff416c, #f39c12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid #FFD700; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    <img src="https://raw.githubusercontent.com/aypoth/aypoth/refs/heads/main/IMG_20260706_132623_679.jpg" 
+         alt="Logo" 
+         style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; animation: pulse 1.5s infinite;">
+</div>
         
         <h3 style="font-weight: 800; color: #1a1a1a; margin-bottom: 8px; font-size: 26px; letter-spacing: -0.5px;">লগইন করুন</h3>
         <p style="font-size: 14px; color: #777; margin-bottom: 35px; font-weight: 500;">আপনার অ্যাকাউন্টে প্রবেশ করতে তথ্য দিন</p>
@@ -2861,11 +2861,11 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
             background: #ffffff; border-radius: 15px; border: 2px solid; border-image: linear-gradient(135deg, #ff0000, #ffcc00) 1;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1); box-sizing: border-box;">
     
-    <div class="text-center" style="text-align: center;">
-        <div style="width: 70px; height: 70px; border: 1px solid rgba(255, 0, 0, 0.25); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
+<div class="text-center" style="text-align: center;">
+        <div style="width: 75px; height: 75px; background: linear-gradient(135deg, #ff416c, #f39c12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid #FFD700; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <img src="https://raw.githubusercontent.com/aypoth/aypoth/refs/heads/main/IMG_20260706_132623_679.jpg" 
                  alt="Logo" 
-                 style="width: 48px; height: 48px; object-fit: contain;">
+                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; animation: pulse 1.5s infinite;">
         </div>
         
         <h3 style="font-weight: 800; color: #1a1a1a; margin-bottom: 8px; font-size: 26px; letter-spacing: -0.5px;">রেজিষ্ট্রেশন করুন</h3>
@@ -13435,50 +13435,84 @@ function installApp() {
         alert("App is already installed or not supported on this browser.");
     }
 }
-
 function showForgotPopup() {
     Swal.fire({
-        title: '<span style="font-family:\'Poppins\', sans-serif; font-size:18px; font-weight:800; color:#1e293b;">পাসওয়ার্ড পুনরুদ্ধার</span>',
+        target: document.getElementById('p-home') || document.body,
+        width: '380px',
+        showCancelButton: true,
+        confirmButtonText: '<i class="fa fa-paper-plane"></i> Submit Now',
+        cancelButtonText: 'Back',
+        confirmButtonColor: '#ff0000',
+        cancelButtonColor: 'rgba(0, 0, 0, 0.4)',
+        allowOutsideClick: false,
+        customClass: {
+            popup: 'forgot-password-popup'
+        },
         html: `
+        <style>
+            .forgot-password-popup { 
+                border-radius: 8px !important; 
+                overflow: hidden; 
+                background: linear-gradient(135deg, #ff416c, #ff4b2b, #f39c12) !important; 
+                color: #fff !important;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            .forgot-input {
+                width: 100%; 
+                padding: 10px; 
+                background: rgba(255, 255, 255, 0.9);
+                border: 1px solid rgba(255, 215, 0, 0.5); 
+                border-radius: 6px; 
+                box-sizing: border-box; 
+                font-size: 13px; 
+                outline: none;
+                color: #000;
+                font-weight: 500;
+            }
+            .forgot-input:focus {
+                background: #ffffff;
+                border-color: #FFD700;
+                box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+            }
+            .logo-circular {
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        </style>
+
+        <div style="padding: 10px 5px 0px; text-align: center; font-family: 'Poppins', sans-serif;">
+            <!-- লোগো -->
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #ff416c, #f39c12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; border: 2px solid #FFD700; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <img src="https://raw.githubusercontent.com/aypoth/aypoth/refs/heads/main/IMG_20260706_132623_679.jpg" 
+                     alt="Aypoth Logo" 
+                     class="logo-circular"
+                     style="width: 100%; height: 100%; animation: pulse 1.5s infinite;">
+            </div>
+
+            <h3 style="font-size: 18px; font-weight: 900; color: #ffffff; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">পাসওয়ার্ড রিকোভার</h3>
+
             <div style="text-align: left; font-family: 'Poppins', sans-serif;">
-                
                 <div style="margin-bottom: 12px;">
-                    <label style="font-size: 12px; font-weight: 700; color: #475569; display: block; margin-bottom: 5px;">আপনার নাম:</label>
-                    <input id="swal-input-name" type="text" placeholder="এখানে আপনার নাম লিখুন" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 13px; outline: none;">
+                    <label style="font-size: 12px; font-weight: 700; color: #FFD700; display: block; margin-bottom: 5px;">আপনার একাউন্ট নাম:</label>
+                    <input id="swal-input-name" type="text" placeholder="এখানে আপনার নাম লিখুন" class="forgot-input">
                 </div>
                 
                 <div style="margin-bottom: 12px;">
-                    <label style="font-size: 12px; font-weight: 700; color: #475569; display: block; margin-bottom: 5px;">আপনার জিমেইল:</label>
-                    <input id="swal-input-email" type="email" placeholder="example@gmail.com" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 13px; outline: none;">
+                    <label style="font-size: 12px; font-weight: 700; color: #FFD700; display: block; margin-bottom: 5px;">আপনার জিমেইল:</label>
+                    <input id="swal-input-email" type="email" placeholder="example@gmail.com" class="forgot-input">
                 </div>
                 
                 <div style="margin-bottom: 15px;">
-                    <label style="font-size: 12px; font-weight: 700; color: #475569; display: block; margin-bottom: 5px;">হোয়াটসঅ্যাপ নম্বর:</label>
-                    <input id="swal-input-whatsapp" type="number" placeholder="017XXXXXXXX" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 13px; outline: none;">
+                    <label style="font-size: 12px; font-weight: 700; color: #FFD700; display: block; margin-bottom: 5px;">হোয়াটসঅ্যাপ নম্বর:</label>
+                    <input id="swal-input-whatsapp" type="number" placeholder="017XXXXXXXX" class="forgot-input">
                 </div>
                 
-                <div style="font-size: 12px; line-height: 1.5; color: #64748b; background: #f8fafc; padding: 10px; border-left: 3px solid #ff0000; border-radius: 4px;">
+                <div style="font-size: 12px; line-height: 1.5; color: #fff; background: rgba(0, 0, 0, 0.25); padding: 10px; border-left: 3px solid #FFD700; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
                     এগুলো দিয়ে সাবমিট করুন, আপনার হোয়াটসঅ্যাপে পাসওয়ার্ড টা এখনই দিয়ে দেওয়া হবে ধন্যবাদ।
                 </div>
             </div>
+        </div>
         `,
-        icon: 'info',
-        iconColor: '#ff0000',
-        
-        showCancelButton: true,
-        confirmButtonText: '<i class="fa fa-paper-plane"></i> Submit Now', // সাবমিট টেক্সট
-        cancelButtonText: 'Back',
-        
-        confirmButtonColor: '#ff0000',
-        cancelButtonColor: '#64748b',
-        
-        customClass: {
-            popup: 'custom-swal-square-popup',
-            confirmButton: 'custom-swal-square-btn',
-            cancelButton: 'custom-swal-square-btn'
-        },
-        
-        // ভ্যালিডেশন চেক
         preConfirm: () => {
             const name = document.getElementById('swal-input-name').value.trim();
             const email = document.getElementById('swal-input-email').value.trim();
@@ -13490,6 +13524,8 @@ function showForgotPopup() {
             }
             return { name: name, email: email, whatsapp: whatsapp };
         }
+
+
     }).then((result) => {
         if (result.isConfirmed) {
             const userData = result.value;
@@ -13544,24 +13580,74 @@ function showInstallPopup() {
     let timer = 20;
     
     Swal.fire({
-        title: '<span style="font-size:18px;">Install Our App</span>',
+        target: document.getElementById('p-home') || document.body,
+        width: '380px',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        customClass: {
+            popup: 'install-app-popup'
+        },
         html: `
-            <div style="text-align: left; font-size: 14px; line-height: 1.6; color: #444;">
-                <p>অ্যাপ ইন্সটল করতে এখানে <b id="countdown" style="color: #ff0000; font-size: 16px;">${timer}</b> সেকেন্ড অপেক্ষা করতে হবে।</p>
+        <style>
+            .install-app-popup { 
+                border-radius: 8px !important; 
+                overflow: hidden; 
+                background: linear-gradient(135deg, #ff416c, #ff4b2b, #f39c12) !important; 
+                color: #fff !important;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            .install-btn {
+                width: 100%; 
+                padding: 12px; 
+                background: #28a745; 
+                color: white; 
+                border: none; 
+                border-radius: 6px; 
+                font-weight: bold; 
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                transition: 0.3s;
+            }
+            .install-btn:hover {
+                background: #218838;
+            }
+            .logo-circular {
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        </style>
+
+        <div style="padding: 10px 5px 0px; text-align: center; font-family: 'Poppins', sans-serif;">
+            <!-- লোগো -->
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #ff416c, #f39c12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; border: 2px solid #FFD700; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <img src="https://raw.githubusercontent.com/aypoth/aypoth/refs/heads/main/IMG_20260706_132623_679.jpg" 
+                     alt="Aypoth Logo" 
+                     class="logo-circular"
+                     style="width: 100%; height: 100%; animation: pulse 1.5s infinite;">
+            </div>
+
+            <h3 style="font-size: 18px; font-weight: 900; color: #ffffff; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">আ্যাপ ইন্সটল করুন</h3>
+
+            <div style="text-align: left; font-size: 13px; line-height: 1.6; color: #fff;">
+                <p style="text-align: center; background: rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                    অ্যাপ ইন্সটল করতে এখানে <b id="countdown" style="color: #FFD700; font-size: 16px;">${timer}</b> সেকেন্ড অপেক্ষা করতে হবে।
+                </p>
                 
                 <div id="install-action-btn" style="display:none; margin-top: 15px;">
-                    <button onclick="triggerActualInstall()" style="width:100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer;">
+                    <button onclick="triggerActualInstall()" class="install-btn">
                         <i class="fas fa-mobile-alt"></i> এখনই ইন্সটল করুন
                     </button>
                 </div>
 
-                <hr style="margin: 15px 0; border-top: 1px solid #eee;">
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid rgba(255, 255, 255, 0.2);">
                 
-                <p style="font-size: 12px; color: #666;">
-                    <i class="fas fa-info-circle"></i> <b>যদি উপরের বাটন কাজ না করে:</b><br>
-                    উপরে থাকা ব্রাউজারের ৩টি ফোটা (⋮) আইকনে চাপ দিন। নিচে স্ক্রল করে <b>"Add to home screen"</b> অপশনে চাপ দিয়ে ইন্সটল করে নিন।
+                <p style="font-size: 11px; color: #f9f9f9; background: rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 6px; border-left: 3px solid #FFD700;">
+                    <i class="fas fa-info-circle" style="color: #FFD700;"></i> <b>যদি উপরের বাটন কাজ না করে:</b><br>
+                    উপরে থাকা ব্রাউজারের ৩টি ফোটা (⋮) আইকনে চাপ দিন। নিচে স্ক্রল করে <b>"Add to home screen"</b> অপশনে চাপ দিয়ে ইন্সটল করে নিন।
                 </p>
             </div>
+        </div>
+
         `,
         showConfirmButton: false,
         showCancelButton: true,
