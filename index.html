@@ -2799,12 +2799,12 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
     <!-- ইউজার কাউন্টার সেকশন -->
     <div style="display: flex; justify-content: space-around; background: #fff5f5; padding: 15px; border-radius: 10px; margin-bottom: 25px; border: 1px dashed #ff9900;">
         <div>
-            <p style="font-size: 13px; color: #666; margin: 0 0 5px;">নতুন ইউজার (আজ)</p>
-            <h3 id="new-users" style="font-size: 20px; color: #ff0000; margin: 0; font-weight: 700;">12</h3>
+            <p style="font-size: 13px; color: #666; margin: 0 0 5px;">নতুন ইউজার</p>
+            <h3 id="new-users" style="font-size: 20px; color: #ff0000; margin: 0; font-weight: 700;">456</h3>
         </div>
         <div style="border-left: 1px solid #ddd; padding-left: 20px;">
             <p style="font-size: 13px; color: #666; margin: 0 0 5px;">সর্বমোট ইউজার</p>
-            <h3 id="total-users" style="font-size: 20px; color: #ff9900; margin: 0; font-weight: 700;">1,450</h3>
+            <h3 id="total-users" style="font-size: 20px; color: #ff9900; margin: 0; font-weight: 700;">1450</h3>
         </div>
     </div>
 
@@ -2847,7 +2847,7 @@ if (typeof openPage !== 'function') { function openPage(pageId) { alert(pageId +
         localStorage.setItem('totalUsers', '1450');
     }
     if (!localStorage.getItem('newUsers')) {
-        localStorage.setItem('newUsers', '12');
+        localStorage.setItem('newUsers', '456');
     }
 
     const totalUsersElem = document.getElementById('total-users');
@@ -3590,26 +3590,26 @@ function togglePassword() {
 </div>
 
 <div id="activation-card" style="display: block; margin: 15px 12px;">
-    <div class="premium-pulse-card" style="background: linear-gradient(135deg, #ff0000 0%, #ff4d00 50%, #ff8c00 100%); padding: 15px 18px; border-radius: 22px; color: white; box-shadow: 0 12px 30px rgba(255, 61, 0, 0.4); position: relative; overflow: hidden; border: 1.5px solid rgba(255, 255, 255, 0.4); display: flex; align-items: center; justify-content: space-between; animation: cardAttract 3s infinite ease-in-out;">
+    <div class="premium-pulse-card" style="background: linear-gradient(135deg, #ff0000 0%, #ff4d00 50%, #ff8c00 100%); padding: 10px 14px; border-radius: 16px; color: white; box-shadow: 0 8px 20px rgba(255, 61, 0, 0.4); position: relative; overflow: hidden; border: 1.5px solid rgba(255, 255, 255, 0.4); display: flex; align-items: center; justify-content: space-between; animation: cardAttract 3s infinite ease-in-out;">
         
         <!-- ব্যাকগ্রাউন্ড গ্লো ইফেক্টস -->
         <div style="position: absolute; top: -30px; right: -20px; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.25); border-radius: 50%; filter: blur(35px);"></div>
         <div style="position: absolute; bottom: -25px; left: -10px; width: 80px; height: 80px; background: rgba(0, 0, 0, 0.15); border-radius: 50%; filter: blur(25px);"></div>
 
         <!-- কন্টেন্ট পার্ট -->
-        <div style="display: flex; align-items: center; gap: 14px; z-index: 2;">
+        <div style="display: flex; align-items: center; gap: 10px; z-index: 2;">
             <!-- ফি বক্স -->
-            <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); width: 50px; height: 50px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px solid rgba(255, 255, 255, 0.5); box-shadow: inset 0 0 10px rgba(255,255,255,0.2);">
-                <span style="font-size: 9px; font-weight: 800; color: #ffe600; text-transform: uppercase; letter-spacing: 0.5px;">Fee</span>
-                <span style="font-weight: 900; color: #ffffff; font-size: 15px; line-height: 1;">৳100</span>
+            <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); width: 38px; height: 38px; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px solid rgba(255, 255, 255, 0.5); box-shadow: inset 0 0 10px rgba(255,255,255,0.2);">
+                <span style="font-size: 8px; font-weight: 800; color: #ffe600; text-transform: uppercase; letter-spacing: 0.5px;">Fee</span>
+                <span style="font-weight: 900; color: #ffffff; font-size: 13px; line-height: 1;">৳100</span>
             </div>
             
             <!-- টেক্সট সমূহ -->
             <div>
-                <h6 style="margin: 0; font-weight: 850; font-size: 15px; color: #ffffff; display: flex; align-items: center; gap: 6px; font-family: 'Poppins', sans-serif; text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 2px 4px rgba(0,0,0,0.2);">
-                    Premium Access <i class="fas fa-crown" style="color: #ffe600; font-size: 13px; animation: crownGlow 1.5s infinite alternate;"></i>
+                <h6 style="margin: 0; font-weight: 850; font-size: 13px; color: #ffffff; display: flex; align-items: center; gap: 5px; font-family: 'Poppins', sans-serif; text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 2px 4px rgba(0,0,0,0.2);">
+                    Premium Access <i class="fas fa-crown" style="color: #ffe600; font-size: 11px; animation: crownGlow 1.5s infinite alternate;"></i>
                 </h6>
-                <p style="margin: 3px 0 0; font-size: 10px; color: rgba(255,255,255,0.95); font-weight: 600; letter-spacing: 0.2px;">
+                <p style="margin: 2px 0 0; font-size: 9px; color: rgba(255,255,255,0.95); font-weight: 600; letter-spacing: 0.2px;">
                     Lifetime Activation & VIP Tasks
                 </p>
             </div>
@@ -3617,18 +3617,17 @@ function togglePassword() {
 
         <!-- অ্যানিমেটেড বাটন -->
         <button onclick="activateAccountNow()" class="activate-btn" 
-                style="background: #ffffff; color: #ff0000; border: none; padding: 10px 18px; border-radius: 14px; font-weight: 900; font-size: 11px; cursor: pointer; box-shadow: 0 6px 20px rgba(255, 77, 0, 0.4); text-transform: uppercase; letter-spacing: 1px; z-index: 2; border: 2px solid #ffe600; animation: btnGlow 1.5s infinite alternate;">
-             ACTIVATE
+                style="background: #ffffff; color: #ff0000; border: none; padding: 7px 14px; border-radius: 10px; font-weight: 900; font-size: 10px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 77, 0, 0.4); text-transform: uppercase; letter-spacing: 1px; z-index: 2; border: 2px solid #ffe600; animation: btnGlow 1.5s infinite alternate;">
+            ACTIVATE
         </button>
     </div>
 </div>
 
 <!-- অ্যানিমেশন যোগ করার জন্য CSS স্টাইল শিট -->
 <style>
-    /* পুরো কার্ডটি কিছুক্ষণ পর পর হালকা কাঁপবে এবং বড়-ছোট হয়ে চমকাবে */
     @keyframes cardAttract {
-        0%, 100% { transform: scale(1); box-shadow: 0 12px 30px rgba(255, 61, 0, 0.4); }
-        45% { transform: scale(1.02) translateY(-2px); box-shadow: 0 18px 35px rgba(255, 61, 0, 0.6); }
+        0%, 100% { transform: scale(1); box-shadow: 0 8px 20px rgba(255, 61, 0, 0.4); }
+        45% { transform: scale(1.02) translateY(-2px); box-shadow: 0 12px 25px rgba(255, 61, 0, 0.6); }
         50% { transform: scale(1.02) rotate(1deg); }
         52% { transform: scale(1.02) rotate(-1deg); }
         54% { transform: scale(1.02) rotate(1deg); }
@@ -3636,19 +3635,16 @@ function togglePassword() {
         58% { transform: scale(1.02) translateY(-2px); }
     }
 
-    /* বাটনের চারপাশের নিয়ন লাইটিং গ্লো ইফেক্ট */
     @keyframes btnGlow {
-        0% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 230, 0, 0.5), 0 6px 20px rgba(255, 77, 0, 0.3); }
-        100% { transform: scale(1.05); box-shadow: 0 0 15px #ffe600, 0 6px 25px rgba(255, 77, 0, 0.5); }
+        0% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 230, 0, 0.5), 0 4px 15px rgba(255, 77, 0, 0.3); }
+        100% { transform: scale(1.05); box-shadow: 0 0 12px #ffe600, 0 4px 20px rgba(255, 77, 0, 0.5); }
     }
 
-    /* ক্রাউন বা মুকুটের গ্লো অ্যানিমেশন */
     @keyframes crownGlow {
         0% { filter: drop-shadow(0 0 2px rgba(255, 230, 0, 0.4)); transform: scale(1); }
-        100% { filter: drop-shadow(0 0 10px #ffe600); transform: scale(1.2) rotate(5deg); }
+        100% { filter: drop-shadow(0 0 8px #ffe600); transform: scale(1.2) rotate(5deg); }
     }
 
-    /* বাটনে হাত দিলে ক্লিক ইফেক্ট */
     .activate-btn:active {
         transform: scale(0.95) !important;
     }
@@ -3925,10 +3921,22 @@ function togglePassword() {
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 0; text-align: center; width: 100%;">
         
 
+<!-- ১. ইন্টারনেট ড্রাইভ অফার (মোবাইল আইকনসহ) -->
+<div class="photo-grid-item" onclick="handleInternetOfferClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- মোবাইল ফোন আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+        </svg>
+    </div>
+    <span>ড্রাইভ<br> অফার</span>
+</div>
+
+
 
 <!-- ২. মাইক্রো জব -->
 <div class="photo-grid-item" onclick="handleMicroJobClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
+    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
     <div class="photo-grid-box" style="border-radius: 0px;">
         <!-- ল্যাপটপ ও টাস্ক আইকন -->
         <svg viewBox="0 0 24 24">
@@ -3938,17 +3946,6 @@ function togglePassword() {
     <span>মাইক্রো<br>জব</span>
 </div>
 
-<!-- ৩. অ্যাডস ইনকাম -->
-<div class="photo-grid-item" onclick="handleAdsIncomeClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- মেগাফোন/মাইক আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-        </svg>
-    </div>
-    <span>অ্যাড<br>ইনকাম</span>
-</div>
 <!-- ৪. জিমেইল ক্রিয়েট -->
 <div class="photo-grid-item" onclick="handleGmailCreateClick()">
     <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
@@ -3973,17 +3970,7 @@ function togglePassword() {
     <span>জব<br>পোস্ট</span>
 </div>
 
-<!-- ৬. ডিজিটাল সার্ভিস -->
-<div class="photo-grid-item" onclick="handleDigitalServiceClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- গিয়ার/সেটিংস আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
-        </svg>
-    </div>
-    <span>ডিজিটাল<br>সার্ভিস</span>
-</div>
+
 <!-- ৭. সোশ্যাল সার্ভিস -->
 <div class="photo-grid-item" onclick="handleSocialServiceClick()">
     <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
@@ -4052,7 +4039,152 @@ function togglePassword() {
             </div>
             <span>ট্রেনিং<br>সেকশন</span>
         </div>
+<!-- ১. ক্যাপচা এন্ট্রি -->
+<div class="photo-grid-item" onclick="handleCaptchaClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- সিকিউরিটি কোড/ক্যাপচা আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+        </svg>
+    </div>
+    <span>ক্যাপচা<br>এন্ট্রি</span>
+</div>
 
+
+<!-- ২. থাম্বনেইল ডিজাইন -->
+<div class="photo-grid-item" onclick="handleThumbnailClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- ইমেজ/থাম্বনেইল আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+        </svg>
+    </div>
+    <span>থাম্বনেইল<br>ডিজাইন</span>
+</div>
+
+<!-- ৬. সোশ্যাল মিডিয়া ব্যানার ডিজাইন (পিক্সেল / ইমেজ ফ্রেম আইকন) -->
+<div class="photo-grid-item" onclick="handleBannerDesignClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- ইমেজ ফ্রেম বা ব্যানার আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
+        </svg>
+    </div>
+    <span>ব্যানার ডিজাইন<br>কাজ</span>
+</div>
+<!-- ৯. ল্যান্ডিং পেজ ডিজাইন (মনিটর / ওয়েব স্ক্রিন আইকন) -->
+<div class="photo-grid-item" onclick="handleLandingPageClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- মনিটর বা ডিসপ্লে আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/>
+        </svg>
+    </div>
+    <span>ল্যান্ডিং পেজ<br>ডিজাইন</span>
+</div>
+<!-- ১২. বিজনেস কার্ড ডিজাইন -->
+<div class="photo-grid-item" onclick="handleBusinessCardClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- আইডি কার্ড বা বিজনেস কার্ড আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6v-2zm0 4h2v2H6v-2zm4-4h8v2h-8v-2zm0 4h8v2h-8v-2z"/>
+        </svg>
+    </div>
+    <span>বিজনেস কার্ড<br>ডিজাইন</span>
+</div>
+
+<!-- ৮. লোগো ডিজাইন (লোগো বা ব্র্যান্ড আইকন) -->
+<div class="photo-grid-item" onclick="handleLogoClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- ক্রিয়েটিভ লোগো বা ভেক্টরাইজড আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2l-5.5 9h11L12 2zm0 3.84L15.29 9H8.71L12 5.84zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10-2h8v8h-8v-8zm2 2v4h4v-4h-4z"/>
+        </svg>
+    </div>
+    <span>লোগো<br>ডিজাইন</span>
+</div>
+<!-- ৪. ভিডিও দেখা -->
+<div class="photo-grid-item" onclick="handleWatchVideoClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- প্লে বাটন আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        </svg>
+    </div>
+    <span>ভিডিও দেখে<br>ইনকাম</span>
+</div>
+
+<!-- ৬. ই-বুক তৈরি ও বিক্রি -->
+<div class="photo-grid-item" onclick="handleEbookClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- বই আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+        </svg>
+    </div>
+    <span>ই-বুক তৈরি<br>ও বিক্রি</span>
+</div>
+
+<!-- ৪. ভয়েস ওভার -->
+<div class="photo-grid-item" onclick="handleVoiceOverClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- মাইক্রোফোন আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+        </svg>
+    </div>
+    <span>ভয়েস ওভার<br>কাজ</span>
+</div>
+
+
+
+
+
+
+
+<!-- ১০. কুইজ খেলে ইনকাম -->
+<div class="photo-grid-item" onclick="handleQuizClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- প্রশ্নবোধক/কুইজ আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.03-.42 1.98-1.07 2.75z"/>
+        </svg>
+    </div>
+    <span>কুইজ খেলে<br>ইনকাম</span>
+</div>
+
+<!-- ১১. গেম খেলে ইনকাম -->
+<div class="photo-grid-item" onclick="handleGameClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- গেম প্যাড আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+    </div>
+    <span>গেম খেলে<br>ইনকাম</span>
+</div>
+
+<!-- ১২. ডাটা টাইপিং কাজ -->
+<div class="photo-grid-item" onclick="handleTypingClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- কিবোর্ড আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-2 3H4v-2h2v2zm0-3H4V8h2v2zm2 6h8v-2H8v2zm3-5h2v2h-2v-2zm0-3h2v2h-2V8zm3 3h2v2h-2v-2zm0-3h2v2h-2V8zm2 6h2v-2h-2v2zm0-3h2v-2h-2v2z"/>
+        </svg>
+    </div>
+    <span>টাইপিং<br>জব</span>
+</div>
+
+<!-- ১৩. রিভিউজ লিখে ইনকাম -->
+<div class="photo-grid-item" onclick="handleReviewClick()">
+    <div class="photo-grid-box" style="border-radius: 0px;">
+        <!-- স্টার/রিভিউ আইকন -->
+        <svg viewBox="0 0 24 24">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>
+    </div>
+    <span>রিভিউ লিখে<br>ইনকাম</span>
+</div>
         <!-- ১২. মোর অপশন -->
         <div class="photo-grid-item" onclick="handleMoreOptionsClick()">
                                   <div class="photo-grid-box" style="border-radius: 0px;">
@@ -4731,360 +4863,6 @@ function togglePassword() {
 }
 </style>
 
-<div id="p-digital" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f4f7f6; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
-    
-    <div style="background: #ff0000; padding: 20px 15px; color: white; position: sticky; top: 0; z-index: 101; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="display: flex; align-items: center;">
-                <i class="fas fa-arrow-left" style="font-size: 20px; cursor: pointer; color: white; padding: 5px;" onclick="openPage('p-home')"></i>
-                <h5 style="margin: 0; margin-left: 15px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">
-                    Digital Services
-                </h5>
-            </div>
-            <i class="fas fa-shopping-basket" style="font-size: 18px; color: white; opacity: 0.9;"></i>
-        </div>
-    </div>
-
-    <div class="container mt-3">
-        <p style="font-size: 12px; color: #666; font-weight: 600; margin-left: 5px;">সবচেয়ে কম মূল্যে প্রিমিয়াম সাবস্ক্রিপশন:</p>
-        
-        <div class="row gx-2">
-            
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">YouTube Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 49.00</p>
-                        <button onclick="orderDigital('YouTube Premium', 49)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Telegram Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 350.00</p>
-                        <button onclick="orderDigital('Telegram Premium', 350)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-
-<div class="col-6 mb-3">
-    <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-            <!-- আপডেটেড CapCut Pro আইকন লিঙ্ক -->
-            <img src="https://cdn.worldvectorlogo.com/logos/capcut.svg" style="width: 40px; height: 40px; border-radius: 8px; margin-bottom: 10px; object-fit: contain;">
-            <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">CapCut Pro</h6>
-        </div>
-        <div>
-            <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 99.00</p>
-            <button onclick="orderDigital('CapCut Pro', 99)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-        </div>
-    </div>
-</div>
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Canva Pro</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 30.00</p>
-                        <button onclick="orderDigital('Canva Pro', 30)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732228.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Netflix Screen</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 180.00</p>
-                        <button onclick="orderDigital('Netflix Screen', 180)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Spotify Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 60.00</p>
-                        <button onclick="orderDigital('Spotify Premium', 60)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968843.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">PicsArt Gold</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 80.00</p>
-                        <button onclick="orderDigital('PicsArt Gold', 80)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Prime Video</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 120.00</p>
-                        <button onclick="orderDigital('Prime Video', 120)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn.oaistatic.com/_next/static/media/apple-touch-icon.59f2e798.png" style="width: 40px; border-radius: 8px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">ChatGPT Plus</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 250.00</p>
-                        <button onclick="orderDigital('ChatGPT Plus', 250)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">LinkedIn Prem.</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 450.00</p>
-                        <button onclick="orderDigital('LinkedIn Premium', 450)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968812.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Duolingo Plus</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 70.00</p>
-                        <button onclick="orderDigital('Duolingo Plus', 70)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/2702/2702636.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Truecaller Gold</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 50.00</p>
-                        <button onclick="orderDigital('Truecaller Gold', 50)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/ZEE5_logo.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Zee5 Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 40.00</p>
-                        <button onclick="orderDigital('Zee5 Premium', 40)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/3c/63/05/3c6305a2-c167-9d7a-1153-f72023594894/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg" style="width: 40px; border-radius: 8px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Hoichoi Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 55.00</p>
-                        <button onclick="orderDigital('Hoichoi Premium', 55)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5977/5977581.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Disney+ Hotstar</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 130.00</p>
-                        <button onclick="orderDigital('Disney Hotstar', 130)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968903.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">InShot Pro</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 65.00</p>
-                        <button onclick="orderDigital('InShot Pro', 65)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Pinterest Pro</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 35.00</p>
-                        <button onclick="orderDigital('Pinterest Pro', 35)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Grammarly_logo.svg/2048px-Grammarly_logo.svg.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Grammarly Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 110.00</p>
-                        <button onclick="orderDigital('Grammarly Premium', 110)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5969/5969062.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">NordVPN Premium</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 150.00</p>
-                        <button onclick="orderDigital('NordVPN Premium', 150)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 mb-3">
-                <div style="background: white; border-radius: 18px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968931.png" style="width: 40px; margin-bottom: 10px;">
-                        <h6 style="font-weight: 800; font-size: 13px; margin-bottom: 2px;">Crunchyroll</h6>
-                    </div>
-                    <div>
-                        <p style="color: #20c997; font-weight: 700; font-size: 12px; margin-bottom: 10px;">৳ 95.00</p>
-                        <button onclick="orderDigital('Crunchyroll', 95)" style="width: 100%; border: none; background: #20c997; color: white; border-radius: 8px; font-size: 10px; font-weight: 700; padding: 7px 0;">ORDER NOW</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<!-- Pay Bill Page -->
-<div id="p-paybill" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fdf9; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
-    
-    <!-- Header -->
-    <div style="background: linear-gradient(135deg, #3b82f6 0%, #2ecc71 100%); padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 102; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);">
-        <div style="display: flex; align-items: center;">
-            <i class="fas fa-arrow-left" style="font-size: 20px; cursor: pointer; color: white;" onclick="openPage('home')"></i>
-            <h5 style="margin: 0; margin-left: 20px; font-weight: 700; color: white; letter-spacing: 0.3px;">Pay Bill</h5>
-        </div>
-        <!-- History Icon -->
-        <div onclick="openPage('p-bill-history')" style="cursor: pointer; padding: 8px 12px; background: rgba(255,255,255,0.2); border-radius: 10px;">
-            <i class="fas fa-history" style="font-size: 18px; color: white;"></i>
-        </div>
-    </div>
-
-    <!-- Category Chips -->
-    <div class="d-flex gap-2 p-3" style="overflow-x: auto; white-space: nowrap;">
-        <span class="bill-chip active-bill" onclick="setBillType('Electricity', this)">Electricity</span>
-        <span class="bill-chip" onclick="setBillType('Gas', this)">Gas</span>
-        <span class="bill-chip" onclick="setBillType('Water', this)">Water</span>
-        <span class="bill-chip" onclick="setBillType('Internet', this)">Internet</span>
-    </div>
-
-    <!-- Input Form -->
-    <div style="padding: 15px;">
-        <div style="background: white; border-radius: 20px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-            
-            <!-- Type Display -->
-            <div style="text-align: center; margin-bottom: 20px;">
-                <div style="width: 50px; height: 50px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;">
-                    <i id="bill-icon" class="fas fa-bolt" style="color: #3b82f6; font-size: 20px;"></i>
-                </div>
-                <h6 id="bill-label" style="font-weight: 800; color: #1e293b;">Electricity Bill</h6>
-            </div>
-
-            <!-- Consumer ID -->
-            <div style="margin-bottom: 15px;">
-                <label style="font-size: 11px; font-weight: 700; color: #64748b; margin-left: 5px;">ACCOUNT / CONSUMER ID</label>
-                <div style="background: #f1f5f9; border-radius: 12px; padding: 12px; display: flex; align-items: center; margin-top: 5px;">
-                    <i class="fas fa-id-card" style="color: #3b82f6; margin-right: 12px;"></i>
-                    <input type="text" id="bill-acc-id" placeholder="Enter ID Number" style="background: transparent; border: none; outline: none; width: 100%; font-weight: 600;">
-                </div>
-            </div>
-
-            <!-- Amount -->
-            <div style="margin-bottom: 25px;">
-                <label style="font-size: 11px; font-weight: 700; color: #64748b; margin-left: 5px;">AMOUNT (৳)</label>
-                <div style="background: #f1f5f9; border-radius: 12px; padding: 12px; display: flex; align-items: center; margin-top: 5px;">
-                    <i class="fas fa-money-bill-wave" style="color: #2ecc71; margin-right: 12px;"></i>
-                    <input type="number" id="bill-amt" placeholder="0.00" style="background: transparent; border: none; outline: none; width: 100%; font-weight: 700; font-size: 18px;">
-                </div>
-            </div>
-
-            <!-- Pay Button -->
-            <button onclick="submitBillRequest()" style="width: 100%; background: linear-gradient(135deg, #3b82f6 0%, #2ecc71 100%); color: white; border: none; padding: 15px; border-radius: 15px; font-weight: 700; font-size: 16px; box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);">
-                Proceed to Pay
-            </button>
-        </div>
-    </div>
-</div>
-
-<style>
-    .bill-chip {
-        padding: 8px 18px; background: white; border-radius: 50px; font-size: 13px; font-weight: 600; color: #64748b; border: 1px solid #e2e8f0; cursor: pointer; transition: 0.3s;
-    }
-    .active-bill {
-        background: #3b82f6; color: white; border-color: #3b82f6;
-    }
-</style>
 
 
 <div id="p-vendor-list" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8faff; z-index: 1005; overflow-y: auto; padding-bottom: 80px; box-sizing: border-box; font-family: 'Poppins', sans-serif;">
@@ -5275,7 +5053,7 @@ function togglePassword() {
                         </div>
                         <div style="flex-grow: 1;">
                             <h6 style="margin: 0 0 3px 0; font-weight: 800; color: #2d3436; font-size: 16px;">Online Education & Course Site</h6>
-                            <small style="color: #512da8; font-size: 12px; font-weight: 600; display: block; margin-bottom: 5px;">অনлайн কোর্স বিক্রয় ও স্কুল ম্যানেজমেন্ট</small>
+                            <small style="color: #512da8; font-size: 12px; font-weight: 600; display: block; margin-bottom: 5px;">অনলাইন কোর্স বিক্রয় ও স্কুল ম্যানেজমেন্ট</small>
                             <p style="font-size: 12px; color: #57606f; margin: 0; line-height: 1.5;">ভিডিও লেকচার, এক্সাম সিস্টেম, স্টুডেন্ট প্রোফাইল এবং কোর্স পারচেজ অপশন সহ প্রিমিয়াম LMS ওয়েবসাইট।</p>
                         </div>
                     </div>
@@ -5371,76 +5149,63 @@ function togglePassword() {
     </div>
 </div>
 
-<div id="p-ads" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fdf9; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
+
+<!-- ড্রাইভ অফার মেইন পেজ -->
+<div id="p-drive-offers" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fdf9; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
     
-    <div style="background: linear-gradient(135deg, #3b82f6 0%, #2ecc71 100%); padding: 20px 15px; color: white; position: sticky; top: 0; z-index: 101; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);">
-        
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="display: flex; align-items: center;">
-                <i class="fas fa-arrow-left" style="font-size: 20px; cursor: pointer; color: white; padding: 5px;" onclick="openPage('p-home')"></i>
-                
-                <h5 style="margin: 0; margin-left: 15px; font-weight: 700; letter-spacing: 0.5px;">Ads Income</h5>
-            </div>
+<div style="background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 50%, #f39c12 100%); padding: 20px 15px; color: white; position: sticky; top: 0; z-index: 101; box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+            <i class="fas fa-arrow-left" style="font-size: 20px; cursor: pointer; color: white; padding: 5px;" onclick="openPage('p-home')"></i>
+            <h5 style="margin: 0; margin-left: 15px; font-weight: 700; letter-spacing: 0.5px;">ড্রাইভ অফার প্যাক</h5>
+        </div>
 
 
-            <div onclick="openAdsHistory()" style="cursor: pointer; padding: 8px 12px; background: rgba(255,255,255,0.2); border-radius: 10px;">
-                <i class="fas fa-history" style="font-size: 18px; color: white;"></i>
-            </div>
         </div>
     </div>
 
+    <!-- নোটিশ বোর্ড -->
     <div class="container mt-3">
-        <div style="background: #e9f7ef; border-radius: 15px; padding: 12px; border-left: 5px solid #28a745; margin-bottom: 20px;">
+        <div style="background: #e9f7ef; border-radius: 15px; padding: 12px; border-left: 5px solid #28a745; margin-bottom: 15px;">
             <p style="margin: 0; font-size: 12px; color: #155724; font-weight: 600;">
-                <i class="fas fa-info-circle me-2"></i> নোটিশ: প্রতিটি বিজ্ঞাপন সম্পূর্ণ দেখলে আপনার ব্যালেন্সে টাকা যোগ হবে। স্কিপ করলে পেমেন্ট পাবেন না।
+                <i class="fas fa-info-circle me-2"></i> নোটিশ: ড্রাইভ অফার কিনতে 'বিস্তারিত' দেখে 'ডিলার থেকে অর্ডার করুন' এ ক্লিক করুন। সরাসরি টেলিগ্রামে নিয়ে যাওয়া হবে।
             </p>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            
-            <div style="background: white; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee;">
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #28a745;">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div style="margin-left: 12px;">
-                        <h6 style="margin: 0; font-weight: 700; font-size: 14px; color: #333;">Video Ad #01</h6>
-                        <small style="color: #28a745; font-weight: 600;">Reward: ৳ ০.৫০</small>
-                    </div>
-                </div>
-                <button onclick="watchAd(1, 0.50)" style="background: #28a745; color: white; border: none; padding: 7px 18px; border-radius: 8px; font-size: 12px; font-weight: 700;">দেখুন</button>
-            </div>
+        <!-- সিম ফিল্টার মেথড বাটনগুলো -->
+        <div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; white-space: nowrap; scrollbar-width: none;">
+            <button onclick="filterOffers('all')" class="drive-filter-btn active-filter" style="background: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">সব অফার</button>
+            <button onclick="filterOffers('gp')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">গ্রামীণফোন</button>
+            <button onclick="filterOffers('robi')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">রবি</button>
+            <button onclick="filterOffers('airtel')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">এয়ারটেল</button>
+            <button onclick="filterOffers('bl')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">বাংলালিংক</button>
+            <button onclick="filterOffers('teletalk')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">টেলিটক</button>
+            <button onclick="filterOffers('skitto')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">Skitto</button>
+            <button onclick="filterOffers('ryze')" class="drive-filter-btn" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;">RYZE</button>
+        </div>
 
-            <div style="background: white; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee;">
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #28a745;">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div style="margin-left: 12px;">
-                        <h6 style="margin: 0; font-weight: 700; font-size: 14px; color: #333;">Video Ad #02</h6>
-                        <small style="color: #28a745; font-weight: 600;">Reward: ৳ ০.৫০</small>
-                    </div>
-                </div>
-                <button onclick="watchAd(2, 0.50)" style="background: #28a745; color: white; border: none; padding: 7px 18px; border-radius: 8px; font-size: 12px; font-weight: 700;">দেখুন</button>
-            </div>
-
-            <div style="background: white; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee;">
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #28a745;">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div style="margin-left: 12px;">
-                        <h6 style="margin: 0; font-weight: 700; font-size: 14px; color: #333;">Video Ad #03</h6>
-                        <small style="color: #28a745; font-weight: 600;">Reward: ৳ ০.৫০</small>
-                    </div>
-                </div>
-                <button onclick="watchAd(3, 0.50)" style="background: #28a745; color: white; border: none; padding: 7px 18px; border-radius: 8px; font-size: 12px; font-weight: 700;">দেখুন</button>
-            </div>
-
-            </div>
+        <!-- অফার কার্ড লিস্ট (ডাইনামিকালি লোড হবে) -->
+        <div id="offer-list-container" style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+            <!-- স্ক্রিপ্ট দ্বারা অফারগুলো এখানে যুক্ত হবে -->
+        </div>
     </div>
 </div>
 
+<!-- বিস্তারিত পপআপ মডাল -->
+<div id="offer-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; padding: 20px;">
+    <div style="background: white; border-radius: 20px; width: 100%; max-width: 400px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); position: relative;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
+            <h5 id="modal-title" style="margin: 0; font-weight: 700; color: #333;">অফারের বিস্তারিত</h5>
+            <i class="fas fa-times" onclick="closeOfferModal()" style="cursor: pointer; font-size: 18px; color: #777;"></i>
+        </div>
+        <div id="modal-body" style="font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 20px;">
+            <!-- অফার ডিটেইলস এখানে আসবে -->
+        </div>
+        <button id="modal-order-btn" onclick="" style="width: 100%; background: #28a745; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="fab fa-telegram-plane"></i> ডিলার থেকে অর্ডার করুন
+        </button>
+    </div>
+</div>
 
 
 
@@ -7518,7 +7283,34 @@ initMicroJobs();
     align-items: center;
 }
 </style>
+<div id="digital-order-modal" class="d-none" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
+    <div style="background:#fff; padding:20px; border-radius:8px; width:90%; max-width:400px; position:relative;">
+        <h3 id="modal-product-title">Product Name</h3>
+        <p id="modal-product-price">Price: ৳ 0.00</p>
+        
+        <!-- পেমেন্ট নম্বর সেকশন -->
+        <div style="background:#f8f9fa; padding:10px; border-radius:5px; margin-bottom:15px; font-size:14px;">
+            <p style="margin:0 0 5px 0;"><b>বিকাশ / নগদ (Personal):</b></p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;">
+                <span>Bkash: <b id="bkash-num">01700000000</b></span>
+                <button onclick="copyPaymentNumber('bkash-num')" style="cursor:pointer; background:#20c997; color:#fff; border:none; padding:3px 8px; border-radius:4px;">কপি</button>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span>Nagad: <b id="nagad-num">01800000000</b></span>
+                <button onclick="copyPaymentNumber('nagad-num')" style="cursor:pointer; background:#20c997; color:#fff; border:none; padding:3px 8px; border-radius:4px;">কপি</button>
+            </div>
+        </div>
 
+        <!-- ইনপুট ফিল্ডস -->
+        <input type="text" id="digital-cust-name" placeholder="আপনার নাম" style="width:100%; margin-bottom:10px; padding:8px;">
+        <input type="text" id="digital-cust-phone" placeholder="টেলিগ্রাম ফোন নম্বর" style="width:100%; margin-bottom:10px; padding:8px;">
+        <input type="text" id="digital-cust-username" placeholder="টেলিগ্রাম ইউজারনেম (@username)" style="width:100%; margin-bottom:10px; padding:8px;">
+        <input type="text" id="digital-trx-id" placeholder="ট্রানজেকশন আইডি (TrxID)" style="width:100%; margin-bottom:15px; padding:8px; border: 1px solid #ff4757;">
+
+        <button onclick="submitDigitalOrder()" style="width:100%; background:#20c997; color:#fff; border:none; padding:10px; border-radius:5px; cursor:pointer; font-weight:bold;">অর্ডার কনফার্ম করুন</button>
+        <button onclick="closeDigitalModal()" style="width:100%; background:#ccc; color:#000; border:none; padding:8px; border-radius:5px; cursor:pointer; margin-top:5px;">বাতিল</button>
+    </div>
+</div>
 
 <div id="p-spin" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 2000; overflow-y: auto; padding-bottom: 80px; font-family: 'Poppins', sans-serif;">
     
@@ -13045,67 +12837,31 @@ Swal.fire({
         }
     });
 }
-
-
 function handleMicroJobClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
-        // একাউন্ট একটিভ না থাকলে এই প্রফেশনাল পপআপটি আসবে
         Swal.fire({
-            title: 'অ্যাকাউন্ট অ্যাক্টিভ করুন!',
-            text: 'মাইক্রো জবগুলো সম্পন্ন করে আয় করতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
-            icon: 'info',
+            title: 'মাইক্রো জব লকড!',
+            text: 'মাইক্রো জব সেকশনটি ব্যবহার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            icon: 'lock',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
             cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#1e3a8a',
+            confirmButtonColor: '#ff4b2b',
             cancelButtonColor: '#6c757d',
             background: '#fff',
-            borderRadius: '20px'
+            borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // একাউন্ট একটিভ থাকলে সরাসরি মাইক্রো জব পেজে নিয়ে যাবে
         openPage('p-micro');
     }
 }
-function handleAdsIncomeClick() {
-    // ইউজার যদি একটিভ না থাকে
-    if (curUser.status !== 'active') {
-        
-        Swal.fire({
-            title: 'অ্যাকাউন্ট ভেরিফিকেশন!',
-            text: 'বিজ্ঞাপন দেখে আয় করতে হলে আপনার অ্যাকাউন্টটি একটিভ থাকা বাধ্যতামূলক।',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'এখনই করুন',
-            cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#2ecc71', // সবুজাভ কালার যা আয়ের সাথে মানানসই
-            cancelButtonColor: '#d33',
-            background: '#fff',
-            borderRadius: '20px'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
-                openPage('p-fund'); 
-            }
-        });
-        
-    } else {
-        // যদি একাউন্ট একটিভ থাকে তবে অ্যাডস পেজে নিয়ে যাবে
-        openPage('p-ads');
-    }
-}
+
 function handleLeaderClick() {
-    // ইউজার যদি একটিভ না থাকে
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'লিডারবোর্ড লকড!',
             text: 'লিডারশিপ এবং টপ মেম্বারদের লিস্ট দেখতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করতে হবে।',
@@ -13113,57 +12869,25 @@ function handleLeaderClick() {
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
             cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#f1c40f', // লিডারশিপ বা মুকুটের সাথে মানানসই গোল্ডেন টাইপ কালার
+            confirmButtonColor: '#f1c40f',
             cancelButtonColor: '#6c757d',
             background: '#fff',
             borderRadius: '20px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে লিডারশিপ পেজে নিয়ে যাবে
         openPage('p-leader');
-    }
-}
-function handleDigitalServiceClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
-    if (curUser.status !== 'active') {
-        
-        Swal.fire({
-            title: 'সার্ভিসটি লক করা!',
-            text: 'ডিজিটাল সার্ভিসগুলো অ্যাক্সেস করতে হলে প্রথমে আপনার অ্যাকাউন্টটি অ্যাক্টিভ করা প্রয়োজন।',
-            icon: 'lock',
-            showCancelButton: true,
-            confirmButtonText: 'এখনই করুন',
-            cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#3b82f6', // আপনার বাটনের কালারের সাথে মানানসই
-            cancelButtonColor: '#6c757d',
-            background: '#fff',
-            borderRadius: '25px'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
-                openPage('p-fund'); 
-            }
-        });
-        
-    } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি ডিজিটাল সার্ভিস পেজে নিয়ে যাবে
-        openPage('p-digital');
     }
 }
 
 function handleSocialServiceClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'অ্যাক্সেস ডিনাইড!',
-            text: 'সোশ্যাল সার্ভিস সেকশনটি ব্যবহার করতে আপনার অ্যাকাউন্টটি একটিভ থাকা প্রয়োজন।',
+            text: 'সোশ্যাল সার্ভিস সেকশনটি ব্যবহার করতে আপনার অ্যাকাউন্টটি একটিভ থাকা প্রয়োজন।',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
@@ -13174,47 +12898,39 @@ function handleSocialServiceClick() {
             borderRadius: '20px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে হেল্পের জন্য
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি সোশ্যাল সার্ভিস পেজে নিয়ে যাবে
         openPage('p-social');
     }
 }
+
 function handleTrainingClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'ট্রেনিং লকড!',
-            text: 'আমাদের প্রিমিয়াম ট্রেনিং ভিডিও এবং কোর্সগুলো দেখতে হলে আপনার অ্যাকাউন্টটি একটিভ থাকা প্রয়োজন।',
+            text: 'আমাদের প্রিমিয়াম ট্রেনিং ভিডিও এবং কোর্সগুলো দেখতে হলে আপনার অ্যাকাউন্টটি একটিভ থাকা প্রয়োজন।',
             icon: 'info',
             showCancelButton: true,
-            confirmButtonText:'এখনই করুন',
+            confirmButtonText: 'এখনই করুন',
             cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#2ecc71', // সবুজাভ কালার (সাফল্যের প্রতীক)
+            confirmButtonColor: '#2ecc71',
             cancelButtonColor: '#6c757d',
             background: '#fff',
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে হেল্পের জন্য
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি ট্রেনিং পেজে নিয়ে যাবে
         openPage('p-training');
     }
 }
+
 function handleInvestClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'অ্যাকাউন্ট ভেরিফিকেশন!',
             text: 'ইনভেস্টমেন্ট সেকশনে প্রবেশ করতে হলে আপনার অ্যাকাউন্টটি আগে একটিভ করা বাধ্যতামূলক।',
@@ -13222,83 +12938,71 @@ function handleInvestClick() {
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
             cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#2ecc71', // ইনভেস্টমেন্ট বা লাভের সাথে মানানসই সবুজ কালার
+            confirmButtonColor: '#2ecc71',
             cancelButtonColor: '#d33',
             background: '#fff',
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে যাতে ইউজার এডমিনের সাথে কথা বলতে পারে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি ইনভেস্টমেন্ট পেজে নিয়ে যাবে
         openPage('p-invest');
     }
 }
+
 function handleBloodDonationClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
-            title: 'অ্যাকাউন্ট ভেরিফাইড নয়!',
+            title: 'অ্যাকাউন্ট ভেরিফাইড নয়!',
             text: 'রক্তদান সেকশনে যোগ দিতে বা রক্তদাতার তালিকা দেখতে আপনার অ্যাকাউন্টটি আগে একটিভ করুন।',
             icon: 'info',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
             cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#e74c3c', // রক্তের কালারের সাথে মানানসই লাল রঙ
+            confirmButtonColor: '#e74c3c',
             cancelButtonColor: '#6c757d',
             background: '#fff',
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে ব্লাড ডোনেশন পেজে নিয়ে যাবে
         openPage('p-blood');
     }
 }
+
 function handleTargetBonusClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'বোনাস সেকশন লকড!',
-            text: 'টার্গেট বোনাস এবং রিওয়ার্ডগুলো ক্লেইম করতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            text: 'টার্গেট বোনাস এবং রিওয়ার্ডগুলো ক্লেইম করতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
             icon: 'lock',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
             cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#1e3a8a', // আপনার থিম কালারের সাথে মিল রেখে
+            confirmButtonColor: '#1e3a8a',
             cancelButtonColor: '#6c757d',
             background: '#fff',
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি টার্গেট বোনাস পেজে নিয়ে যাবে
         openPage('p-target');
     }
 }
+
 function handleTopupClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'টপআপ সার্ভিস লকড!',
-            text: 'গেম টপআপ এবং অন্যান্য সার্ভিসগুলো ব্যবহার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            text: 'গেম টপআপ এবং অন্যান্য সার্ভিসগুলো ব্যবহার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
             icon: 'info',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
@@ -13309,23 +13013,19 @@ function handleTopupClick() {
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি টপআপ পেজে নিয়ে যাবে
         openPage('p-topup');
     }
 }
+
 function handleVendorClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'ডেইলি স্পিন লক্ড!',
-            text: 'ডেইলি স্পিন এক্সেস করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            text: 'ডেইলি স্পিন এক্সেস করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
@@ -13336,23 +13036,19 @@ function handleVendorClick() {
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি ভেন্ডর পেজে নিয়ে যাবে
         openPage('p-vendor');
     }
 }
+
 function handleShopClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'শপ অ্যাক্সেস লকড!',
-            text: 'রিসেলার শপে প্রবেশ করতে এবং পণ্য বিক্রয় শুরু করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            text: 'রিসেলার শপে প্রবেশ করতে এবং পণ্য বিক্রয় শুরু করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
@@ -13363,50 +13059,19 @@ function handleShopClick() {
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি শপ পেজে নিয়ে যাবে
         openPage('p-shop');
     }
 }
-function handleDriveOfferClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
-    if (curUser.status !== 'active') {
-        
-        Swal.fire({
-            title: 'অফারটি লক করা!',
-            text: 'স্পেশাল ড্রাইভ অফারগুলো দেখতে এবং ক্রয় করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
-            icon: 'lock',
-            showCancelButton: true,
-            confirmButtonText: 'এখনই করুন?',
-            cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#1e3a8a',
-            cancelButtonColor: '#6c757d',
-            background: '#fff',
-            borderRadius: '25px'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
-                openPage('p-fund'); 
-            }
-        });
-        
-    } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি ড্রাইভ অফার পেজে নিয়ে যাবে
-        openPage('p-drive');
-    }
-}
+
 function handleJobPostClick() {
-    // চেক করা হচ্ছে ইউজারের একাউন্ট একটিভ কি না
     if (curUser.status !== 'active') {
-        
         Swal.fire({
             title: 'জব পোস্ট লকড!',
-            text: 'আমাদের প্ল্যাটফর্মে নতুন জব পোস্ট করতে হলে আপনার অ্যাকাউন্টটি প্রথমে অ্যাক্টিভ করা প্রয়োজন।',
+            text: 'আমাদের প্ল্যাটফর্মে নতুন জব পোস্ট করতে হলে আপনার অ্যাকাউন্টটি প্রথমে অ্যাক্টিভ করা প্রয়োজন।',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'এখনই করুন',
@@ -13417,44 +13082,19 @@ function handleJobPostClick() {
             borderRadius: '25px'
         }).then((result) => {
             if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
                 openPage('p-fund'); 
             }
         });
-        
     } else {
-        // যদি একাউন্ট একটিভ থাকে তবে সরাসরি জব পোস্ট পেজে নিয়ে যাবে
         openPage('p-post');
     }
 }
-
 function handleMoreOptionsClick() {
-    // চেক করা হচ্ছে ইউজারের অ্যাকাউন্ট একটিভ কি না
-    if (curUser.status !== 'active') {
-        
-        Swal.fire({
-            title: 'অতিরিক্ত অপশনগুলো লকড!',
-            text: 'বাকি সব স্পেশাল ফিচার এবং অপশনগুলো দেখতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
-            icon: 'info',
-            showCancelButton: true,
-            confirmButtonText: 'এখনই করুন',
-            cancelButtonText: 'পরে করবো',
-            confirmButtonColor: '#1e3a8a',
-            cancelButtonColor: '#6c757d',
-            background: '#fff',
-            borderRadius: '25px'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // সরাসরি সাপোর্ট পেজে নিয়ে যাবে
-                openPage('p-fund'); 
-            }
-        });
-        
-    } else {
-        // যদি অ্যাকাউন্ট একটিভ থাকে তবে সরাসরি More Options পেজে নিয়ে যাবে
-        openPage('p-more');
-    }
+    openPage('p-more');
 }
+
+
+
 // নোটিফিকেশন পেজ খোলা
 function openNotifications() {
     document.getElementById('notification-page').style.display = 'block';
@@ -14149,197 +13789,7 @@ function setOp(opName) {
 }
 
 
-// ১. অর্ডার বাটন চাপলে পপআপ ওপেন করার ফাংশন
-function orderDigital(prodName, prodPrice) {
-    if (!curUser) return alert("দয়া করে আগে লগইন করুন!");
 
-    // স্টেট সেট করা
-    currentDigitalOrder.productName = prodName;
-    currentDigitalOrder.price = Number(prodPrice);
-
-    // পপআপ টেক্সট আপডেট
-    document.getElementById('modal-product-title').innerText = prodName;
-    document.getElementById('modal-product-price').innerText = `Price: ৳ ${prodPrice}.00`;
-
-    // ইনপুট ফিল্ডগুলো রিসেট করা
-    document.getElementById('digital-cust-name').value = curUser.name || "";
-    document.getElementById('digital-cust-phone').value = "";
-    document.getElementById('digital-cust-username').value = "";
-
-    // পপআপ শো করা
-    const modal = document.getElementById('digital-order-modal');
-    if (modal) {
-        modal.classList.remove('d-none');
-        modal.style.display = 'flex';
-    }
-}
-
-// ২. পপআপ ক্লোজ করার ফাংশন
-function closeDigitalModal() {
-    const modal = document.getElementById('digital-order-modal');
-    if (modal) {
-        modal.classList.add('d-none');
-        modal.style.display = 'none';
-    }
-}
-
-// ডাবল সাবমিশন লক করার জন্য ফাংশনের বাইরে একটি গ্লোবাল ভেরিয়েবল
-let isOrderProcessing = false;
-
-// ৩. সাবমিট এবং ব্যালেন্স কাটার মূল ফাংশন (উইথড্র সিস্টেমের মতো ১০০% পার্মানেন্ট)
-async function submitDigitalOrder() {
-    // অহেতুক ডাবল ক্লিক বা রিফ্রেশ লক চেক
-    if (isOrderProcessing) {
-        return console.log("অর্ডার প্রসেস হচ্ছে, দয়া করে অপেক্ষা করুন...");
-    }
-
-    const nameEl = document.getElementById('digital-cust-name');
-    const phoneEl = document.getElementById('digital-cust-phone');
-    const usernameEl = document.getElementById('digital-cust-username');
-
-    if (!nameEl || !phoneEl || !usernameEl) return;
-
-    const name = nameEl.value.trim();
-    const phone = phoneEl.value.trim();
-    const username = usernameEl.value.trim();
-
-    // ১. ভ্যালিডেশন চেক
-    if (!name || !phone || !username) {
-        return alert("অনুগ্রহ করে সব তথ্য সঠিকভাবে পূরণ করুন!");
-    }
-
-    if (!curUser) {
-        return alert("দয়া করে আগে লগইন করুন!");
-    }
-
-    // অর্ডার প্রসেস শুরু - লক চালু হলো
-    isOrderProcessing = true;
-
-    // ২. db.users অ্যারে থেকে এই লগইন থাকা ইউজারকে খুঁজে বের করা
-    let userIndex = db.users.findIndex(u => u.email === curUser.email);
-    if (userIndex === -1) {
-        isOrderProcessing = false; // রিসেট
-        return alert("ইউজার ডাটাবেজে খুঁজে পাওয়া যায়নি!");
-    }
-
-    // ৩. ইউজারের বর্তমান ব্যালেন্স চেক (db.users[userIndex].bal থেকে সরাসরি)
-    let currentBal = Number(db.users[userIndex].bal || 0);
-    let orderPrice = Number(currentDigitalOrder.price);
-
-    if (currentBal < orderPrice) {
-        isOrderProcessing = false; // রিসেট
-        return alert("দুঃখিত! আপনার মেইন ব্যালেন্সে পর্যাপ্ত টাকা নেই।");
-    }
-
-    // ৪. ব্যালেন্স কেটে নেওয়া (উইথড্র সিস্টেমের মতো চিরতরে মাইনাস)
-    let newBalance = currentBal - orderPrice;
-    
-    // ডাটাবেজ অবজেক্ট এবং কারেন্ট সেশনে ব্যালেন্স আপডেট
-    db.users[userIndex].bal = newBalance;
-    curUser.bal = newBalance;
-
-    // ৫. ডিজিটাল অর্ডারের হিস্টোরি পুশ করা
-    if (!db.digital_orders) db.digital_orders = [];
-    
-    const orderId = 'DG-' + Math.floor(100000 + Math.random() * 900000);
-    const orderData = {
-        orderId: orderId,
-        userEmail: curUser.email,
-        customerName: name,
-        telegramPhone: phone,
-        telegramUsername: username,
-        productName: currentDigitalOrder.productName,
-        price: orderPrice,
-        status: "Pending",
-        date: new Date().toLocaleString('bn-BD')
-    };
-    
-    db.digital_orders.push(orderData);
-
-    // ৬. লোকাল স্টোরেজে সম্পূর্ণ ডাটাবেজ সেভ এবং সার্ভার (api.php) সিঙ্ক
-    if (typeof save === "function") {
-        await save(); // await ব্যবহার করা হয়েছে যাতে ব্যাকএন্ডে সেভ হওয়া নিশ্চিত হয়
-    } else {
-        localStorage.setItem('v7_u', JSON.stringify(db.users));
-        localStorage.setItem('digital_orders_list', JSON.stringify(db.digital_orders));
-    }
-
-    // ৭. অতিরিক্ত ব্যাকআপ কি (Key) থাকলে তাও আপডেট করা
-    localStorage.setItem('balance_' + curUser.email, newBalance);
-
-    // ৮. আপনার ওয়েবসাইটের হোমপেজ বা হেডার এর ব্যালেন্স UI আপডেট করা
-    if (typeof updateUIBalance === "function") {
-        updateUIBalance();
-    } else if (typeof renderHome === "function") {
-        renderHome();
-    } else {
-        const balElement = document.getElementById('user-balance');
-        if(balElement) balElement.innerText = formatCurrency(newBalance);
-    }
-
-    // ৯. টেলিগ্রাম বটে ডাটা পাঠানো
-    sendDigitalOrderToTelegram(orderData);
-
-    // ১০. সবচেয়ে গুরুত্বপূর্ণ: ফর্মের ইনপুট ফিল্ডগুলো চিরতরে খালি করে দেওয়া
-    // এর ফলে পেজ রিফ্রেশ দিলেও ভ্যালিডেশন ফেল করবে, ব্যালেন্স কাটবে না
-    nameEl.value = "";
-    phoneEl.value = "";
-    usernameEl.value = "";
-    
-    // অর্ডার প্রসেস শেষ - লক অবমুক্ত করা হলো
-    isOrderProcessing = false;
-
-    // পপআপ বন্ধ করা ও সফলতার মেসেজ
-    closeDigitalModal();
-    
-    Swal.fire({
-        title: 'অর্ডার সফল হয়েছে! 🚀',
-        text: `অর্ডার আইডি: ${orderId}। আপনার অ্যাকাউন্ট থেকে ৳${orderPrice} কেটে নেওয়া হয়েছে।`,
-        icon: 'success',
-        confirmButtonColor: '#20c997'
-    });
-}
-
-// ৪. টেলিগ্রাম বট এপিআই ইন্টিগ্রেশন ফাংশন (ভেরিয়েবল নেম ফিক্সড)
-function sendDigitalOrderToTelegram(order) {
-    const tgToken = "7963516868:AAEX5wGUkgYDaTfA0ffL_B3COQaZKNRDlvo"; 
-    const tgChatId = "6882504862";   
-
-    const textMessage = `
-🛒 *নতুন ডিজিটাল সার্ভিস অর্ডার!*
-━━━━━━━━━━━━━━━━━━
-🆔 *Order ID:* \`${order.orderId}\`
-📦 *Product:* ${order.productName}
-💰 *Price:* ৳ ${order.price}.00
-👤 *User Email:* ${order.userEmail}
-━━━━━━━━━━━━━━━━━━
-📝 *কাস্টমার ডিটেইলস:*
-• *Name:* ${order.customerName}
-• *Telegram Phone:* ${order.telegramPhone}
-• *Telegram User:* ${order.telegramUsername}
-📅 *Time:* ${order.date}
-━━━━━━━━━━━━━━━━━━
-⚡ _ব্যালেন্স সফলভাবে কেটে নেওয়া হয়েছে। সার্ভিসটি দ্রুত ডেলিভারি দিন।_
-    `;
-
-    // এখানে সঠিক ভেরিয়েবল tgToken ব্যবহার করা হয়েছে
-    const telegramUrl = `https://api.telegram.org/bot${tgToken}/sendMessage`;
-
-    fetch(telegramUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            chat_id: tgChatId, // এখানে সঠিক ভেরিয়েবল tgChatId ব্যবহার করা হয়েছে
-            text: textMessage,
-            parse_mode: 'Markdown'
-        })
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (!data.ok) console.error("টেলিগ্রাম বটে মেসেজ পাঠাতে সমস্যা হয়েছে:", data.description);
-    })
-    .catch(err => console.error("টেলিগ্রাম API এরর:", err));
-}
 
 // ১. ইনভেস্ট নিশ্চিতকরণ এবং ব্যালেন্স কাটার মূল ফাংশন
 function confirmInvest() {
@@ -15425,7 +14875,453 @@ function contactForWeb(serviceName) {
     window.open(telegramUrl, '_blank');
 }
 
+// প্রতি সিমের ২০টি করে মোট ১২০টি ড্রাইভ অফারের ডাটাবেস
+const allDriveOffers = [
+    // --- গ্রামীণফোন (GP) ২০টি ---
+    { id: 1, operator: 'gp', name: 'GP 30GB + 500 Min (30 Days)', price: '৫৯৯ টাকা', regularPrice: '৭৫০ টাকা', details: 'অফার: ৩০ জিবি ইন্টারনেট এবং ৫০০ মিনিট। মেয়াদ: ৩০ দিন। সকল গ্রাহकोंের জন্য প্রযোজ্য।' },
+    { id: 2, operator: 'gp', name: 'GP 10GB + 200 Min (7 Days)', price: '২৪৯ টাকা', regularPrice: '৩২০ টাকা', details: 'অফার: ১০ জিবি ইন্টারনেট এবং ২০০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 3, operator: 'gp', name: 'GP 50GB Internet (30 Days)', price: '৬৯৯ টাকা', regularPrice: '৮৫০ টাকা', details: 'অফার: ৫০ জিবি ফুল স্পিড ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 4, operator: 'gp', name: 'GP 15GB + 100 Min (15 Days)', price: '২৯৯ টাকা', regularPrice: '৩৭০ টাকা', details: 'অফার: ১৫ জিবি ইন্টারনেট এবং ১০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 5, operator: 'gp', name: 'GP 5GB + 50 Min (3 Days)', price: '৯৯ টাকা', regularPrice: '১৩০ টাকা', details: 'অফার: ৫ জিবি ও ৫০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 6, operator: 'gp', name: 'GP 40GB + 800 Min (30 Days)', price: '৭৯৯ টাকা', regularPrice: '৯৫০ টাকা', details: 'অফার: ৪০ জিবি ইন্টারনেট এবং ৮০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 7, operator: 'gp', name: 'GP 8GB Internet (7 Days)', price: '১৭৯ টাকা', regularPrice: '২২০ টাকা', details: 'অফার: ৮ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 8, operator: 'gp', name: 'GP 25GB + 300 Min (30 Days)', price: '৪၉৯ টাকা', regularPrice: '৬০০ টাকা', details: 'অফার: ২৫ জিবি ইন্টারনেট ও ৩০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 9, operator: 'gp', name: 'GP 100GB Mega Pack (30 Days)', price: '৯৯৯ টাকা', regularPrice: '১২০০ টাকা', details: 'অফার: ১০০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 10, operator: 'gp', name: 'GP 2GB + 30 Min (2 Days)', price: '৬৯ টাকা', regularPrice: '৯০ টাকা', details: 'অফার: ২ জিবি ও ৩০ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 11, operator: 'gp', name: 'GP 20GB Internet (15 Days)', price: '৩৪৯ টাকা', regularPrice: '৪২০ টাকা', details: 'অফার: ২০ জিবি ইন্টারনেট। মেয়াদ: ১৫ দিন।' },
+    { id: 12, operator: 'gp', name: 'GP 60GB + 1000 Min (30 Days)', price: '৮৯৯ টাকা', regularPrice: '১১০০ টাকা', details: 'অফার: ৬০ জিবি ও ১০০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 13, operator: 'gp', name: 'GP 12GB + 150 Min (7 Days)', price: '২৮৯ টাকা', regularPrice: '৩৫০ টাকা', details: 'অফার: ১২ জিবি ও ১৫০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 14, operator: 'gp', name: 'GP 4GB Internet (7 Days)', price: '১২৯ টাকা', regularPrice: '১৬০ টাকা', details: 'অফার: ৪ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 15, operator: 'gp', name: 'GP 35GB + 400 Min (30 Days)', price: '৬৪৯ টাকা', regularPrice: '৭৮০ টাকা', details: 'অফার: ৩৫ জিবি ও ৪০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 16, operator: 'gp', name: 'GP 18GB + 200 Min (15 Days)', price: '৩২৯ টাকা', regularPrice: '৪০০ টাকা', details: 'অফার: ১৮ জিবি ও ২০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 17, operator: 'gp', name: 'GP 3GB (3 Days)', price: '৫৯ টাকা', regularPrice: '৮০ টাকা', details: 'অফার: ৩ জিবি ইন্টারনেট। মেয়াদ: ৩ দিন।' },
+    { id: 18, operator: 'gp', name: 'GP 45GB + 500 Min (30 Days)', price: '৭৪৯ টাকা', regularPrice: '৯০০ টাকা', details: 'অফার: ৪৫ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 19, operator: 'gp', name: 'GP 7GB + 100 Min (7 Days)', price: '১৯৯ টাকা', regularPrice: '২৫০ টাকা', details: 'অফার: ৭ জিবি ও ১০০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 20, operator: 'gp', name: 'GP 80GB Mega Pack (30 Days)', price: '৮৯৯ টাকা', regularPrice: '১১০ টাকা', details: 'অফার: ৮০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
 
+    // --- রবি (Robi) ২০টি ---
+    { id: 21, operator: 'robi', name: 'Robi 35GB + 600 Min (30 Days)', price: '৫৫০ টাকা', regularPrice: '৭১০ টাকা', details: 'অফার: ৩৫ জিবি ও ৬০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 22, operator: 'robi', name: 'Robi 12GB + 200 Min (7 Days)', price: '২৩৯ টাকা', regularPrice: '২৯০ টাকা', details: 'অফার: ১২ জিবি ও ২০০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 23, operator: 'robi', name: 'Robi 50GB Internet (30 Days)', price: '৬৫৯ টাকা', regularPrice: '৮০০ টাকা', details: 'অফার: ৫০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 24, operator: 'robi', name: 'Robi 10GB + 100 Min (10 Days)', price: '১৯৯ টাকা', regularPrice: '২৫০ টাকা', details: 'অফার: ১০ জিবি ও ১০০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 25, operator: 'robi', name: 'Robi 4GB + 50 Min (3 Days)', price: '৮৯ টাকা', regularPrice: '১২০ টাকা', details: 'অফার: ৪ জিবি ও ৫০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 26, operator: 'robi', name: 'Robi 25GB + 400 Min (30 Days)', price: '৪৫০ টাকা', regularPrice: '৫৮০ টাকা', details: 'অফার: ২৫ জিবি ও ৪০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 27, operator: 'robi', name: 'Robi 8GB Internet (7 Days)', price: '১৫৯ টাকা', regularPrice: '২০ মিনিট', details: 'অফার: ৮ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 28, operator: 'robi', name: 'Robi 20GB + 200 Min (15 Days)', price: '৩১৯ টাকা', regularPrice: '৩৯০ টাকা', details: 'অফার: ২০ জিবি ও ২০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 29, operator: 'robi', name: 'Robi 70GB + 1000 Min (30 Days)', price: '৮৫০ টাকা', regularPrice: '১০৫০ টাকা', details: 'অফার: ৭০ জিবি ও ১০০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 30, operator: 'robi', name: 'Robi 3GB + 30 Min (2 Days)', price: '৫৫ টাকা', regularPrice: '৭৫ টাকা', details: 'অফার: ৩ জিবি ও ৩০ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 31, operator: 'robi', name: 'Robi 15GB Internet (15 Days)', price: '২৯৯ টাকা', regularPrice: '৩৭০ টাকা', details: 'অফার: ১৫ জিবি ইন্টারনেট। মেয়াদ: ১৫ দিন।' },
+    { id: 32, operator: 'robi', name: 'Robi 40GB + 500 Min (30 Days)', price: '৬৯৯ টাকা', regularPrice: '৮৫০ টাকা', details: 'অফার: ৪০ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 33, operator: 'robi', name: 'Robi 6GB + 80 Min (7 Days)', price: '১৩৯ টাকা', regularPrice: '১৮০ টাকা', details: 'অফার: ৬ জিবি ও ৮০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 34, operator: 'robi', name: 'Robi 2GB (2 Days)', price: '৩৯ টাকা', regularPrice: '৬০ টাকা', details: 'অফার: ২ জিবি ইন্টারনেট। মেয়াদ: ২ দিন।' },
+    { id: 35, operator: 'robi', name: 'Robi 30GB + 300 Min (30 Days)', price: '৫৩০ টাকা', regularPrice: '৬৭০ টাকা', details: 'অফার: ৩০ জিবি ও ৩০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 36, operator: 'robi', name: 'Robi 14GB + 150 Min (10 Days)', price: '২৪৯ টাকা', regularPrice: '৩১০ টাকা', details: 'অফার: ১৪ জিবি ও ১৫০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 37, operator: 'robi', name: 'Robi 5GB (7 Days)', price: '৯৯ টাকা', regularPrice: '১৩৫ টাকা', details: 'অফার: ৫ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 38, operator: 'robi', name: 'Robi 60GB + 800 Min (30 Days)', price: '৭৯৯ টাকা', regularPrice: '৯৮০ টাকা', details: 'অফার: ৬০ জিবি ও ৮০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 39, operator: 'robi', name: 'Robi 9GB + 100 Min (7 Days)', price: '১৮৯ টাকা', regularPrice: '২৩০ টাকা', details: 'অফার: ৯ জিবি ও ১০০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 40, operator: 'robi', name: 'Robi 90GB Mega Pack (30 Days)', price: '৯৫০ টাকা', regularPrice: '১১৫০ টাকা', details: 'অফার: ৯০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+
+    // --- এয়ারটেল (Airtel) ২০টি ---
+    { id: 41, operator: 'airtel', name: 'Airtel 30GB + 500 Min (30 Days)', price: '৫৪০ টাকা', regularPrice: '৭০ দিন', details: 'অফার: ৩০ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 42, operator: 'airtel', name: 'Airtel 10GB + 150 Min (7 Days)', price: '২২৯ টাকা', regularPrice: '২৮০ টাকা', details: 'অফার: ১০ জিবি ও ১৫০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 43, operator: 'airtel', name: 'Airtel 45GB Internet (30 Days)', price: '৬২০ টাকা', regularPrice: '৭৮০ টাকা', details: 'অফার: ৪৫ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 44, operator: 'airtel', name: 'Airtel 15GB + 100 Min (15 Days)', price: '২৮৯ টাকা', regularPrice: '৩৫০ টাকা', details: 'অফার: ১৫ জিবি ও ১০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 45, operator: 'airtel', name: 'Airtel 5GB + 40 Min (3 Days)', price: '৮৫ টাকা', regularPrice: '১১০ টাকা', details: 'অফার: ৫ জিবি ও ৪০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 46, operator: 'airtel', name: 'Airtel 20GB + 300 Min (30 Days)', price: '৩৯৯ টাকা', regularPrice: '৫২০ টাকা', details: 'অফার: ২০ জিবি ও ৩০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 47, operator: 'airtel', name: 'Airtel 7GB Internet (7 Days)', price: '১৪৯ টাকা', regularPrice: '১৯০ টাকা', details: 'অফার: ৭ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 48, operator: 'airtel', name: 'Airtel 25GB + 200 Min (15 Days)', price: '৩৫০ টাকা', regularPrice: '৪৩০ টাকা', details: 'অফার: ২৫ জিবি ও ২০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 49, operator: 'airtel', name: 'Airtel 60GB + 900 Min (30 Days)', price: '৮২০ টাকা', regularPrice: '১০০ টাকা', details: 'অফার: ৬০ জিবি ও ৯০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 50, operator: 'airtel', name: 'Airtel 3GB + 20 Min (2 Days)', price: '৫০ টাকা', regularPrice: '৭০ টাকা', details: 'অফার: ৩ জিবি ও ২০ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 51, operator: 'airtel', name: 'Airtel 12GB Internet (10 Days)', price: '২৪৯ টাকা', regularPrice: '৩০০ টাকা', details: 'অফার: ১২ জিবি ইন্টারনেট। মেয়াদ: ১০ দিন।' },
+    { id: 52, operator: 'airtel', name: 'Airtel 35GB + 400 Min (30 Days)', price: '৬৫০ টাকা', regularPrice: '৮০০ টাকা', details: 'অফার: ৩৫ জিবি ও ৪০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 53, operator: 'airtel', name: 'Airtel 5GB + 60 Min (7 Days)', price: '১২৯ টাকা', regularPrice: '১৬০ টাকা', details: 'অফার: ৫ জিবি ও ৬০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 54, operator: 'airtel', name: 'Airtel 2GB (2 Days)', price: '৩৫ টাকা', regularPrice: '৫০ টাকা', details: 'অফার: ২ জিবি ইন্টারনেট। মেয়াদ: ২ দিন।' },
+    { id: 55, operator: 'airtel', name: 'Airtel 28GB + 250 Min (30 Days)', price: '৪৯৯ টাকা', regularPrice: '৬২০ টাকা', details: 'অফার: ২৮ জিবি ও ২৫০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 56, operator: 'airtel', name: 'Airtel 14GB + 120 Min (10 Days)', price: '২৩৯ টাকা', regularPrice: '২৯০ টাকা', details: 'অফার: ১৪ জিবি ও ১২০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 57, operator: 'airtel', name: 'Airtel 4GB (7 Days)', price: '৮৯ টাকা', regularPrice: '১২০ টাকা', details: 'অফার: ৪ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 58, operator: 'airtel', name: 'Airtel 50GB + 700 Min (30 Days)', price: '৭৫০ টাকা', regularPrice: '৯২০ টাকা', details: 'অফার: ৫০ জিবি ও ৭০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 59, operator: 'airtel', name: 'Airtel 8GB + 80 Min (7 Days)', price: '১৭৯ টাকা', regularPrice: '২২০ টাকা', details: 'অফার: ৮ জিবি ও ৮০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 60, operator: 'airtel', name: 'Airtel 80GB Mega Pack (30 Days)', price: '৮৯৯ টাকা', regularPrice: '১০৮০ টাকা', details: 'অফার: ৮০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+
+    // --- বাংলালিংক (Banglalink) ২০টি ---
+    { id: 61, operator: 'bl', name: 'BL 30GB + 500 Min (30 Days)', price: '৫৩০ টাকা', regularPrice: '৬৯০ টাকা', details: 'অফার: ৩০ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 62, operator: 'bl', name: 'BL 10GB + 150 Min (7 Days)', price: '২২৫ টাকা', regularPrice: '২৭৫ টাকা', details: 'অফার: ১০ জিবি ও ১৫০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 63, operator: 'bl', name: 'BL 40GB Internet (30 Days)', price: '৫৮০ টাকা', regularPrice: '৭২০ টাকা', details: 'অফার: ৪০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 64, operator: 'bl', name: 'BL 15GB + 100 Min (15 Days)', price: '২৮০ টাকা', regularPrice: '৩৪০ টাকা', details: 'অফার: ১৫ জিবি ও ১০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 65, operator: 'bl', name: 'BL 4GB + 40 Min (3 Days)', price: '৭৯ টাকা', regularPrice: '১০০ টাকা', details: 'অফার: ৪ জিবি ও ৪০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 66, operator: 'bl', name: 'BL 25GB + 350 Min (30 Days)', price: '৪৪০ টাকা', regularPrice: '৫৬০ টাকা', details: 'অফার: ২৫ জিবি ও ৩৫০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 67, operator: 'bl', name: 'BL 7GB Internet (7 Days)', price: '১৩৯ টাকা', regularPrice: '১৭৫ টাকা', details: 'অফার: ৭ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 68, operator: 'bl', name: 'BL 20GB + 200 Min (15 Days)', price: '৩০৯ টাকা', regularPrice: '৩৭৫ টাকা', details: 'অফার: ২০ জিবি ও ২০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 69, operator: 'bl', name: 'BL 60GB + 800 Min (30 Days)', price: '৭৮০ টাকা', regularPrice: '৯৫০ টাকা', details: 'অফার: ৬০ জিবি ও ৮০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 70, operator: 'bl', name: 'BL 3GB + 25 Min (2 Days)', price: '৪৫ টাকা', regularPrice: '৬৫ টাকা', details: 'অফার: ৩ জিবি ও ২৫ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 71, operator: 'bl', name: 'BL 12GB Internet (10 Days)', price: '২৩৯ টাকা', regularPrice: '২৯০ টাকা', details: 'অফার: ১২ জিবি ইন্টারনেট। মেয়াদ: ১০ দিন।' },
+    { id: 72, operator: 'bl', name: 'BL 35GB + 450 Min (30 Days)', price: '৬৪০ টাকা', regularPrice: '৭৮০ টাকা', details: 'অফার: ৩৫ জিবি ও ৪৫০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 73, operator: 'bl', name: 'BL 5GB + 50 Min (7 Days)', price: '১১৯ টাকা', regularPrice: '১৫০ টাকা', details: 'অফার: ৫ জিবি ও ৫০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 74, operator: 'bl', name: 'BL 2GB (2 Days)', price: '৩০ টাকা', regularPrice: '৪৫ টাকা', details: 'অফার: ২ জিবি ইন্টারনেট। মেয়াদ: ২ দিন।' },
+    { id: 75, operator: 'bl', name: 'BL 28GB + 200 Min (30 Days)', price: '৪৮০ টাকা', regularPrice: '৫৯০ টাকা', details: 'অফার: ২৮ জিবি ও ২০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 76, operator: 'bl', name: 'BL 14GB + 100 Min (10 Days)', price: '২২৯ টাকা', regularPrice: '২৮০ টাকা', details: 'অফার: ১৪ জিবি ও ১০০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 77, operator: 'bl', name: 'BL 4GB (7 Days)', price: '৭৯ টাকা', regularPrice: '১১০ টাকা', details: 'অফার: ৪ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 78, operator: 'bl', name: 'BL 50GB + 600 Min (30 Days)', price: '৭২০ টাকা', regularPrice: '৮৮০ টাকা', details: 'অফার: ৫০ জিবি ও ৬০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 79, operator: 'bl', name: 'BL 8GB + 70 Min (7 Days)', price: '১৬৯ টাকা', regularPrice: '২১০ টাকা', details: 'অফার: ৮ জিবি ও ৭০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 80, operator: 'bl', name: 'BL 75GB Mega Pack (30 Days)', price: '৮৫০ টাকা', regularPrice: '১০২০ টাকা', details: 'অফার: ৭৫ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+
+    // --- টেলিটক (Teletalk) ২০টি ---
+    { id: 81, operator: 'teletalk', name: 'Teletalk 50GB + 500 Min (30 Days)', price: '৪৫০ টাকা', regularPrice: '৬০০ টাকা', details: 'অফার: ৫০ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 82, operator: 'teletalk', name: 'Teletalk 15GB + 200 Min (7 Days)', price: '১৯৯ টাকা', regularPrice: '২৫০ টাকা', details: 'অফার: ১৫ জিবি ও ২০০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 83, operator: 'teletalk', name: 'Teletalk 40GB Internet (30 Days)', price: '৪৮০ টাকা', regularPrice: '৬০০ টাকা', details: 'অফার: ৪০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 84, operator: 'teletalk', name: 'Teletalk 10GB + 100 Min (10 Days)', price: '১৫০ টাকা', regularPrice: '১৯০ টাকা', details: 'অফার: ১০ জিবি ও ১০০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 85, operator: 'teletalk', name: 'Teletalk 5GB + 50 Min (3 Days)', price: '৬৯ টাকা', regularPrice: '৯০ টাকা', details: 'অফার: ৫ জিবি ও ৫০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 86, operator: 'teletalk', name: 'Teletalk 30GB + 300 Min (30 Days)', price: '৩৫০ টাকা', regularPrice: '৪৫০ টাকা', details: 'অফার: ৩০ জিবি ও ৩০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 87, operator: 'teletalk', name: 'Teletalk 10GB (7 Days)', price: '১১০ টাকা', regularPrice: '১৪০ টাকা', details: 'অফার: ১০ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 88, operator: 'teletalk', name: 'Teletalk 25GB + 150 Min (15 Days)', price: '২৫০ টাকা', regularPrice: '৩২০ টাকা', details: 'অফার: ২৫ জিবি ও ১৫০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 89, operator: 'teletalk', name: 'Teletalk 100GB Mega Pack (30 Days)', price: '৭৫০ টাকা', regularPrice: '৯৫০ টাকা', details: 'অফার: ১০০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 90, operator: 'teletalk', name: 'Teletalk 3GB + 30 Min (2 Days)', price: '৪০ টাকা', regularPrice: '৫৫ টাকা', details: 'অফার: ৩ জিবি ও ৩০ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 91, operator: 'teletalk', name: 'Teletalk 20GB Internet (15 Days)', price: '২২০ টাকা', regularPrice: '২৮০ টাকা', details: 'অফার: ২০ জিবি ইন্টারনেট। মেয়াদ: ১৫ দিন।' },
+    { id: 92, operator: 'teletalk', name: 'Teletalk 60GB + 600 Min (30 Days)', price: '৫৫০ টাকা', regularPrice: '৭০০ টাকা', details: 'অফার: ৬০ জিবি ও ৬০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 93, operator: 'teletalk', name: 'Teletalk 8GB + 80 Min (7 Days)', price: '১৩0 টাকা', regularPrice: '১৬০ টাকা', details: 'অফার: ৮ জিবি ও ৮০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 94, operator: 'teletalk', name: 'Teletalk 4GB (3 Days)', price: '৫০ টাকা', regularPrice: '৭০ টাকা', details: 'অফার: ৪ জিবি ইন্টারনেট। মেয়াদ: ৩ দিন।' },
+    { id: 95, operator: 'teletalk', name: 'Teletalk 35GB + 400 Min (30 Days)', price: '৪০০ টাকা', regularPrice: '৫২০ টাকা', details: 'অফার: ৩৫ জিবি ও ৪০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 96, operator: 'teletalk', name: 'Teletalk 12GB + 100 Min (10 Days)', price: '১৮০ টাকা', regularPrice: '২২০ টাকা', details: 'অফার: ১২ জিবি ও ১০০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 97, operator: 'teletalk', name: 'Teletalk 6GB (7 Days)', price: '৮৫ টাকা', regularPrice: '১১০ টাকা', details: 'অফার: ৬ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 98, operator: 'teletalk', name: 'Teletalk 70GB + 800 Min (30 Days)', price: '৬৫০ টাকা', regularPrice: '৮২০ টাকা', details: 'অফার: ৭০ জিবি ও ৮০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 99, operator: 'teletalk', name: 'Teletalk 7GB + 50 Min (7 Days)', price: '১০০ টাকা', regularPrice: '১৩০ টাকা', details: 'অফার: ৭ জিবি ও ৫০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 100, operator: 'teletalk', name: 'Teletalk 80GB Mega Pack (30 Days)', price: '৭০০ টাকা', regularPrice: '৮৮০ টাকা', details: 'অফার: ৮০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+
+    // --- Skitto ২০টি ---
+    { id: 101, operator: 'skitto', name: 'Skitto 35GB + 500 Min (30 Days)', price: '৫১০ টাকা', regularPrice: '৬৫০ টাকা', details: 'অফার: ৩৫ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 102, operator: 'skitto', name: 'Skitto 12GB + 150 Min (7 Days)', price: '২১০ টাকা', regularPrice: '২৬০ টাকা', details: 'অফার: ১২ জিবি ও ১৫০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 103, operator: 'skitto', name: 'Skitto 45GB Internet (30 Days)', price: '৬০০ টাকা', regularPrice: '৭৫০ টাকা', details: 'অফার: ৪৫ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 104, operator: 'skitto', name: 'Skitto 15GB + 100 Min (15 Days)', price: '২৯০ টাকা', regularPrice: '৩৫০ টাকা', details: 'অফার: ১৫ জিবি ও ১০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 105, operator: 'skitto', name: 'Skitto 5GB + 40 Min (3 Days)', price: '৮০ টাকা', regularPrice: '১০০ টাকা', details: 'অফার: ৫ জিবি ও ৪০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 106, operator: 'skitto', name: 'Skitto 25GB + 300 Min (30 Days)', price: '৪২০ টাকা', regularPrice: '৫৪০ টাকা', details: 'অফার: ২৫ জিবি ও ৩০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 107, operator: 'skitto', name: 'Skitto 8GB Internet (7 Days)', price: '১৪৯ টাকা', regularPrice: '১৯০ টাকা', details: 'অফার: ৮ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 108, operator: 'skitto', name: 'Skitto 20GB + 200 Min (15 Days)', price: '৩১০ টাকা', regularPrice: '৩৮০ টাকা', details: 'অফার: ২০ জিবি ও ২০০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 109, operator: 'skitto', name: 'Skitto 70GB + 800 Min (30 Days)', price: '৭৯০ টাকা', regularPrice: '৯৮০ টাকা', details: 'অফার: ৭০ জিবি ও ৮০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 110, operator: 'skitto', name: 'Skitto 3GB + 25 Min (2 Days)', price: '৪৮ টাকা', regularPrice: '৬৫ টাকা', details: 'অফার: ৩ জিবি ও ২৫ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 111, operator: 'skitto', name: 'Skitto 14GB Internet (10 Days)', price: '২৪০ টাকা', regularPrice: '২৯০ টাকা', details: 'অফার: ১৪ জিবি ইন্টারনেট। মেয়াদ: ১০ দিন।' },
+    { id: 112, operator: 'skitto', name: 'Skitto 40GB + 400 Min (30 Days)', price: '৬৮০ টাকা', regularPrice: '৮৩০ টাকা', details: 'অফার: ৪০ জিবি ও ৪০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 113, operator: 'skitto', name: 'Skitto 6GB + 60 Min (7 Days)', price: '১৩0 টাকা', regularPrice: '১৬৫ টাকা', details: 'অফার: ৬ জিবি ও ৬০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 114, operator: 'skitto', name: 'Skitto 2GB (2 Days)', price: '৩২ টাকা', regularPrice: '৪৫ টাকা', details: 'অফার: ২ জিবি ইন্টারনেট। মেয়াদ: ২ দিন।' },
+    { id: 115, operator: 'skitto', name: 'Skitto 30GB + 250 Min (30 Days)', price: '৪৯০ টাকা', regularPrice: '৬১০ টাকা', details: 'অফার: ৩০ জিবি ও ২৫০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 116, operator: 'skitto', name: 'Skitto 16GB + 120 Min (10 Days)', price: '২৫০ টাকা', regularPrice: '৩১০ টাকা', details: 'অফার: ১৬ জিবি ও ১২০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 117, operator: 'skitto', name: 'Skitto 5GB (7 Days)', price: '৯0 টাকা', regularPrice: '১২০ টাকা', details: 'অফার: ৫ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 118, operator: 'skitto', name: 'Skitto 55GB + 700 Min (30 Days)', price: '৭৪০ টাকা', regularPrice: '৯১০ টাকা', details: 'অফার: ৫৫ জিবি ও ৭০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 119, operator: 'skitto', name: 'Skitto 9GB + 90 Min (7 Days)', price: '১৮0 টাকা', regularPrice: '২২০ টাকা', details: 'অফার: ৯ জিবি ও ৯০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 120, operator: 'skitto', name: 'Skitto 85GB Mega Pack (30 Days)', price: '৮৮০ টাকা', regularPrice: '১০৮০ টাকা', details: 'অফার: ৮৫ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+
+    // --- RYZE ২০টি ---
+    { id: 121, operator: 'ryze', name: 'RYZE Special 30GB + 400 Min', price: '৪৮০ টাকা', regularPrice: '৬২০ টাকা', details: 'অফার: RYZE স্পেশাল প্যাক ৩০ জিবি ও ৪০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 122, operator: 'ryze', name: 'RYZE 10GB + 100 Min (7 Days)', price: '১৯০ টাকা', regularPrice: '২৪০ টাকা', details: 'অফার: ১০ জিবি ও ১০০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 123, operator: 'ryze', name: 'RYZE 50GB Internet (30 Days)', price: '৬২০ টাকা', regularPrice: '৭৮০ টাকা', details: 'অফার: ৫০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' },
+    { id: 124, operator: 'ryze', name: 'RYZE 15GB + 80 Min (15 Days)', price: '২৭০ টাকা', regularPrice: '৩৩০ টাকা', details: 'অফার: ১৫ জিবি ও ৮০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 125, operator: 'ryze', name: 'RYZE 4GB + 30 Min (3 Days)', price: '৭০ টাকা', regularPrice: '৯৫ টাকা', details: 'অফার: ৪ জিবি ও ৩০ মিনিট। মেয়াদ: ৩ দিন।' },
+    { id: 126, operator: 'ryze', name: 'RYZE 25GB + 250 Min (30 Days)', price: '৩৯0 টাকা', regularPrice: '৪৯0 টাকা', details: 'অফার: ২৫ জিবি ও ২৫০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 127, operator: 'ryze', name: 'RYZE 7GB Internet (7 Days)', price: '১৩০ টাকা', regularPrice: '১৭০ টাকা', details: 'অফার: ৭ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 128, operator: 'ryze', name: 'RYZE 20GB + 150 Min (15 Days)', price: '২৯0 টাকা', regularPrice: '৩৬০ টাকা', details: 'অফার: ২০ জিবি ও ১৫০ মিনিট। মেয়াদ: ১৫ দিন।' },
+    { id: 129, operator: 'ryze', name: 'RYZE 60GB + 700 Min (30 Days)', price: '৭৫০ টাকা', regularPrice: '৯৩০ টাকা', details: 'অফার: ৬০ জিবি ও ৭০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 130, operator: 'ryze', name: 'RYZE 3GB + 20 Min (2 Days)', price: '৪২ টাকা', regularPrice: '৬০ টাকা', details: 'অফার: ৩ জিবি ও ২০ মিনিট। মেয়াদ: ২ দিন।' },
+    { id: 131, operator: 'ryze', name: 'RYZE 12GB Internet (10 Days)', price: '২২০ টাকা', regularPrice: '২৭০ টাকা', details: 'অফার: ১২ জিবি ইন্টারনেট। মেয়াদ: ১০ দিন।' },
+    { id: 132, operator: 'ryze', name: 'RYZE 35GB + 350 Min (30 Days)', price: '৬১০ টাকা', regularPrice: '৭৬০ টাকা', details: 'অফার: ৩৫ জিবি ও ৩৫০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 133, operator: 'ryze', name: 'RYZE 5GB + 40 Min (7 Days)', price: '১১০ টাকা', regularPrice: '১৪০ টাকা', details: 'অফার: ৫ জিবি ও ৪০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 134, operator: 'ryze', name: 'RYZE 2GB (2 Days)', price: '২৮ টাকা', regularPrice: '৪০ টাকা', details: 'অফার: ২ জিবি ইন্টারনেট। মেয়াদ: ২ দিন।' },
+    { id: 135, operator: 'ryze', name: 'RYZE 28GB + 200 Min (30 Days)', price: '৪৬০ টাকা', regularPrice: '৫৮০ টাকা', details: 'অফার: ২৮ জিবি ও ২০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 136, operator: 'ryze', name: 'RYZE 14GB + 90 Min (10 Days)', price: '২১০ টাকা', regularPrice: '২৬০ টাকা', details: 'অফার: ১৪ জিবি ও ৯০ মিনিট। মেয়াদ: ১০ দিন।' },
+    { id: 137, operator: 'ryze', name: 'RYze 4GB (7 Days)', price: '৭৫ টাকা', regularPrice: '১০০ টাকা', details: 'অফার: ৪ জিবি ইন্টারনেট। মেয়াদ: ৭ দিন।' },
+    { id: 138, operator: 'ryze', name: 'RYZE 50GB + 500 Min (30 Days)', price: '৬৯০ টাকা', regularPrice: '৮৫০ টাকা', details: 'অফার: ৫০ জিবি ও ৫০০ মিনিট। মেয়াদ: ৩০ দিন।' },
+    { id: 139, operator: 'ryze', name: 'RYZE 8GB + 60 Min (7 Days)', price: '১৫০ টাকা', regularPrice: '১৯0 টাকা', details: 'অফার: ৮ জিবি ও ৬০ মিনিট। মেয়াদ: ৭ দিন।' },
+    { id: 140, operator: 'ryze', name: 'RYZE 80GB Mega Pack (30 Days)', price: '৮৫০ টাকা', regularPrice: '১০৫০ টাকা', details: 'অফার: ৮০ জিবি ইন্টারনেট। মেয়াদ: ৩০ দিন।' }
+];
+
+// পেজ লোড হওয়ার পর অফার रেন্ডার করার ফাংশন
+function renderOffers(filter = 'all') {
+    const container = document.getElementById('offer-list-container');
+    container.innerHTML = '';
+
+    const filtered = filter === 'all' 
+        ? allDriveOffers 
+        : allDriveOffers.filter(offer => offer.operator === filter);
+
+    if (filtered.length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: #777; padding: 20px;">কোনো অফার পাওয়া যায়নি!</p>';
+        return;
+    }
+
+    filtered.forEach(offer => {
+        const card = document.createElement('div');
+        card.style.cssText = 'background: white; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee;';
+        
+        card.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 45px; height: 45px; background: #e8f5e9; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #28a745; font-size: 18px; font-weight: bold;">
+                    ${offer.operator.toUpperCase()}
+                </div>
+                <div>
+                    <h6 style="margin: 0; font-weight: 700; font-size: 14px; color: #333;">${offer.name}</h6>
+                    <div style="display: flex; gap: 8px; align-items: center; margin-top: 3px;">
+                        <span style="color: #28a745; font-weight: 700; font-size: 13px;">মূল্য: ${offer.price}</span>
+                        <span style="color: #999; text-decoration: line-through; font-size: 11px;">${offer.regularPrice}</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showOfferDetails('${offer.name}', '${offer.price}', '${offer.details}')" style="background: #3b82f6; color: white; border: none; padding: 7px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;">বিস্তারিত</button>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// ফিল্টার বাটন ক্লিক হ্যান্ডলার
+function filterOffers(operator) {
+    // সব ফিল্টার বাটন থেকে একটিভ ক্লাস রিমোভ করা
+    document.querySelectorAll('.drive-filter-btn').forEach(btn => {
+        btn.style.background = '#fff';
+        btn.style.color = '#333';
+        btn.style.border = '1px solid #ddd';
+    });
+
+    // বর্তমান ক্লিক করা বাটনে একটিভ স্টাইল দেওয়া
+    event.target.style.background = '#28a745';
+    event.target.style.color = '#fff';
+    event.target.style.border = 'none';
+
+    renderOffers(operator);
+}
+
+// বিস্তারিত পপআপ ওপেন করার ফাংশন
+function showOfferDetails(title, price, details) {
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-body').innerHTML = `
+        <p><strong>অফার নাম:</strong> ${title}</p>
+        <p><strong>মূল্য:</strong> <span style="color: #28a745; font-weight: bold;">${price}</span></p>
+        <p><strong>শর্তাবলী:</strong> ${details}</p>
+        <p style="margin-top: 10px; font-size: 12px; color: #666;"><i class="fas fa-shield-alt"></i> ১০০% ট্রাস্টেড ও দ্রুত ড্রাইভ ডেলিভারি।</p>
+    `;
+
+    // টেলিগ্রাম বট বা চ্যানেলে নিয়ে যাওয়ার লিঙ্ক (এখানে আপনার টেলিগ্রাম ইউজারনেম বা বট লিংক বসিয়ে দিন)
+    const telegramUsername = "YourTelegramUsername"; // আপনার টেলিগ্রাম ইউজারনেম দিন
+    const message = encodeURIComponent(`আসসালামু আলাইকুম, আমি এই ড্রাইভ অফারটি কিনতে চাই:\n\nঅফার: ${title}\nমূল্য: ${price}`);
+    
+    const orderBtn = document.getElementById('modal-order-btn');
+    orderBtn.onclick = function() {
+        window.open(`https://t.me/${telegramUsername}?text=${message}`, '_blank');
+    };
+
+    document.getElementById('offer-modal').style.display = 'flex';
+}
+
+// পপআপ ক্লোজ করার ফাংশন
+function closeOfferModal() {
+    document.getElementById('offer-modal').style.display = 'none';
+}
+
+// পেজ লোড হওয়ার সাথে সাথে ডিফল্টভাবে সব অফার রেন্ডার হবে
+document.addEventListener("DOMContentLoaded", function() {
+    renderOffers('all');
+});
+// ড্রাইভ অফার কার্ডে ক্লিক করলে পেজ ওপেন হবে
+function handleInternetOfferClick() {
+    // যদি আপনার প্রজেক্টে openPage ফাংশন ব্যবহার করা হয়ে থাকে:
+    if (typeof openPage === 'function') {
+        openPage('p-drive-offers');
+    } else {
+        // অথবা সরাসরি ডিসপ্লে অন করে দেওয়ার জন্য:
+        const drivePage = document.getElementById('p-drive-offers');
+        if (drivePage) {
+            drivePage.classList.remove('d-none');
+            drivePage.style.display = 'block';
+        }
+    }
+}
+function handleInternetOfferClick() {
+    // চেক করা হচ্ছে ইউজারের অ্যাকাউন্ট একটিভ কি না
+    if (curUser.status !== 'active') {
+        
+        Swal.fire({
+            title: 'অফারটি লক করা!',
+            text: 'স্পেশাল ড্রাইভ অফারগুলো দেখতে এবং ক্রয় করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            icon: 'lock',
+            showCancelButton: true,
+            confirmButtonText: 'এখনই করুন',
+            cancelButtonText: 'পরে করবো',
+            confirmButtonColor: '#ff4b2b', // লাল-হলুদ থিমের সাথে মানানসই কালার
+            cancelButtonColor: '#6c757d',
+            background: '#fff',
+            borderRadius: '25px'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // সরাসরি ফান্ড বা সাপোর্ট পেজে নিয়ে যাবে
+                openPage('p-fund'); 
+            }
+        });
+        
+    } else {
+        // যদি অ্যাকাউন্ট একটিভ থাকে তবে সরাসরি ড্রাইভ অফার পেজে নিয়ে যাবে
+        openPage('p-drive-offers'); 
+    }
+}
+function handleWebDevClick() {
+    // চেক করা হচ্ছে ইউজারের অ্যাকাউন্ট একটিভ কি না
+    if (curUser.status !== 'active') {
+        
+        Swal.fire({
+            title: 'ওয়েবসাইট ডেভেলপমেন্ট লকড!',
+            text: 'ওয়েবসাইট ডেভেলপমেন্ট সার্ভিসটি ব্যবহার করতে এবং অর্ডার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            icon: 'lock',
+            showCancelButton: true,
+            confirmButtonText: 'এখনই করুন',
+            cancelButtonText: 'পরে করবো',
+            confirmButtonColor: '#ff4b2b', // লাল-হলুদ থিমের সাথে মানানসই কালার
+            cancelButtonColor: '#6c757d',
+            background: '#fff',
+            borderRadius: '25px'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // সরাসরি ফান্ড বা সাপোর্ট পেজে নিয়ে যাবে
+                openPage('p-fund'); 
+            }
+        });
+        
+    } else {
+        // যদি অ্যাকাউন্ট একটিভ থাকে তবে সরাসরি ওয়েবসাইট ডেভেলপমেন্ট পেজে নিয়ে যাবে
+        openPage('p-webdev'); // আপনার পেজ আইডি অনুযায়ী এটি পরিবর্তন করে নিতে পারেন
+    }
+}
+
+// ১. ক্যাপচা এন্ট্রি
+function handleCaptchaClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('ক্যাপচা এন্ট্রি লকড!', 'ক্যাপচা এন্ট্রি করে ইনকাম করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-captcha');
+    }
+}
+
+// ২. থাম্বনেইল ডিজাইন
+function handleThumbnailClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('থাম্বনেইল ডিজাইন লকড!', 'থাম্বনেইল ডিজাইন সার্ভিসটি ব্যবহার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-thumbnail');
+    }
+}
+
+// ৩. ব্যানার ডিজাইন কাজ
+function handleBannerDesignClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('ব্যানার ডিজাইন লকড!', 'সোশ্যাল মিডিয়া ব্যানার ডিজাইন সার্ভিসটি পেতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-banner');
+    }
+}
+
+// ৪. ল্যান্ডিং পেজ ডিজাইন
+function handleLandingPageClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('ল্যান্ডিং পেজ ডিজাইন লকড!', 'ল্যান্ডিং পেজ ডিজাইন সার্ভিসটি ব্যবহার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-landing');
+    }
+}
+
+// ৫. বিজনেস কার্ড ডিজাইন
+function handleBusinessCardClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('বিজনেস কার্ড ডিজাইন লকড!', 'বিজনেস কার্ড ডিজাইন সার্ভিসটি নিতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-card');
+    }
+}
+
+// ৬. লোগো ডিজাইন
+function handleLogoClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('লোগো ডিজাইন লকড!', 'লোগো ডিজাইন সার্ভিসটি ব্যবহার করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-logo');
+    }
+}
+
+// ৭. ভিডিও দেখে ইনকাম
+function handleWatchVideoClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('ভিডিও ইনকাম লকড!', 'ভিডিও দেখে ইনকাম করতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-video');
+    }
+}
+
+// ৮. ই-বুক তৈরি ও বিক্রি
+function handleEbookClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('ই-বুক সেকশন লকড!', 'ই-বুক তৈরি ও বিক্রি করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-ebook');
+    }
+}
+
+// ৯. ভয়েস ওভার কাজ
+function handleVoiceOverClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('ভয়েস ওভার লকড!', 'ভয়েস ওভারের কাজ করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-voice');
+    }
+}
+
+// ১০. কুইজ খেলে ইনকাম
+function handleQuizClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('কুইজ সেকশন লকড!', 'কুইজ খেলে ইনকাম করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-quiz');
+    }
+}
+
+// ১১. গেম খেলে ইনকাম
+function handleGameClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('গেম ইনকাম লকড!', 'গেম খেলে ইনকাম করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-game');
+    }
+}
+
+// ১২. ডাটা টাইপিং কাজ
+function handleTypingClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('টাইপিং জব লকড!', 'টাইপিং জব করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-typing');
+    }
+}
+
+// ১৩. রিভিউ লিখে ইনকাম
+function handleReviewClick() {
+    if (curUser.status !== 'active') {
+        showAccountLockModal('রিভিউ জব লকড!', 'রিভিউ লিখে ইনকাম করতে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।');
+    } else {
+        openPage('p-review');
+    }
+}
+
+// কমন লক ম্যালড ফাংশন (কোড ছোট রাখার জন্য)
+function showAccountLockModal(titleText, messageText) {
+    Swal.fire({
+        title: titleText,
+        text: messageText,
+        icon: 'lock',
+        showCancelButton: true,
+        confirmButtonText: 'এখনই করুন',
+        cancelButtonText: 'পরে করবো',
+        confirmButtonColor: '#ff4b2b',
+        cancelButtonColor: '#6c757d',
+        background: '#fff',
+        borderRadius: '25px'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            openPage('p-fund'); 
+        }
+    });
+}
 </script>
 
 </body>
