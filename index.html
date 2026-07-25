@@ -3319,250 +3319,90 @@ function toggleSidebar() {
         background: rgba(255, 255, 255, 0.25) !important;
     }
 </style>
-
+<!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<style>
-    /* স্লাইডার কন্টেইনার ডিজাইন */
-    .cover-section {
-        position: relative;
-        height: 280px; /* আপনার প্রয়োজন অনুযায়ী পরিবর্তন করতে পারেন */
-        border-radius: 24px;
-        margin: 10px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        padding: 25px;
-        box-shadow: 0 15px 35px rgba(255, 0, 0, 0.2);
-    }
 
-    /* ব্যাকগ্রাউন্ডের বড় টেক্সট ডিজাইন */
-    .bg-text {
-        position: absolute;
-        right: -10px;
-        bottom: -20px;
-        font-size: 120px;
-        font-weight: 900;
-        color: #fff;
-        line-height: 1;
-        user-select: none;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-    /* লোগো অ্যানিমেশন ও পজিশন */
-    .slider-logo {
-        position: absolute;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 130px;
-        height: 130px;
-        opacity: 0.9;
-        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
-        z-index: 2;
-        animation: floating 3s ease-in-out infinite;
-    }
-
-    @keyframes floating {
-        0%, 100% { transform: translateY(-50%) translateX(0); }
-        50% { transform: translateY(-60%) translateX(-10px); }
-    }
-
-    /* কন্টেন্ট বক্স (Glassmorphism Effect) */
-    .cover-content {
-        position: relative;
-        z-index: 3;
-        max-width: 70%;
-    }
-
-    .cover-content h1 {
-        font-size: 28px;
-        font-weight: 800;
-        color: #ffffff;
-        margin-bottom: 12px;
-        letter-spacing: -0.5px;
-        line-height: 1.2;
-    }
-
-    .cover-content p {
-        font-size: 14px;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.9);
-        background: rgba(0, 0, 0, 0.15);
-        padding: 10px 15px;
-        border-radius: 12px;
-        backdrop-filter: blur(5px);
-        border-left: 4px solid #fff;
-    }
-
-    .highlight-box {
-        background: #ffffff;
-        color: #ff0000;
-        padding: 2px 12px;
-        border-radius: 50px;
-        font-size: 0.85em;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-</style>
-<div class="swiper mySwiper mt-3">
-<style>
-    /* স্লাইডার কন্টেইনার - চিকন এবং স্লিম ডিজাইন */
-    .cover-section {
-        position: relative;
-        height: 180px; /* হাইট কমিয়ে চিকন করা হয়েছে */
-        border-radius: 20px;
-        margin: 8px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        padding: 15px 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    /* ব্যাকগ্রাউন্ড ওয়াটারমার্ক টেক্সট */
-    .bg-text {
-        position: absolute;
-        right: -5px;
-        bottom: -10px;
-        font-size: 80px; /* সাইজ কমানো হয়েছে */
-        font-weight: 900;
-        color: #fff;
-        opacity: 0.08 !important;
-        user-select: none;
-        z-index: 1;
-    }
-
-    /* লোগো পজিশন */
-    .slider-logo {
-        position: absolute;
-        right: 20px;
-        width: 80px; /* লোগো ছোট করা হয়েছে */
-        height: 80px;
-        opacity: 0.9;
-        z-index: 2;
-        filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
-    }
-
-    /* কন্টেন্ট ডিজাইন */
-    .cover-content {
-        position: relative;
-        z-index: 3;
-        max-width: 65%;
-    }
-
-    .cover-content h1 {
-        font-size: 20px; /* টেক্সট সাইজ অ্যাডজাস্ট করা হয়েছে */
-        font-weight: 800;
-        color: #ffffff;
-        margin-bottom: 6px;
-        line-height: 1.1;
-        text-transform: uppercase;
-    }
-
-    .cover-content p {
-        font-size: 11px; /* প্যারাগ্রাফ ছোট এবং স্লিম */
-        line-height: 1.4;
-        color: rgba(255, 255, 255, 0.9);
-        margin: 0;
-        padding-left: 10px;
-        border-left: 2px solid rgba(255,255,255,0.5);
-    }
-
-    .highlight-badge {
-        background: #fff;
-        color: #ff0000;
-        padding: 1px 8px;
-        border-radius: 4px;
-        font-size: 0.8em;
-        display: inline-block;
-        margin-top: 2px;
-    }
-</style>
 <style>
     /* স্লাইডারের মেইন কন্টেইনার স্টাইল */
     .banner-swiper-container {
         width: 100%;
         overflow: hidden;
-        padding: 0 12px; /* দুই পাশে হালকা ফাঁকা (বর্ডারের মতো) রাখার জন্য */
-        margin: 10px auto; /* উপর-নিচে ও মাঝে সুন্দর পজিশনের জন্য */
+        padding: 0 15px;
+        margin: 10px auto;
         box-sizing: border-box;
     }
 
     /* প্রতিটি স্লাইডের ভেতরের ইমেজ বক্স */
     .premium-cover-box {
         width: 100%;
-        /* আপনার দেওয়া ১৫৩৬ x ৬০৭ সাইজের পারফেক্ট রেশিও */
         aspect-ratio: 1536 / 607; 
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #f5f5f5;
-        border-radius: 12px; /* ইমেজের কোণাগুলো সুন্দর গোল দেখানোর জন্য */
+        border-radius: 8px;
     }
 
-    /* ইমেজটি যেন চ্যাপ্টা বা বাঁকা না হয় */
+    /* ইমেজ সাইজ ও প্রোপার্টি */
     .premium-cover-box img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
     }
+
+    /* পেজিনেশন ডট কালার কাস্টমাইজেশন */
+    .swiper-pagination-bullet-active {
+        background: #ff0000 !important;
+    }
 </style>
 
-
-<!-- Swiper CSS (হেড সেকশনে যদি আগে যোগ না করে থাকেন) -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- এখানে প্যাডিং যোগ করা হয়েছে -->
-<div class="swiper mySwiper banner-swiper-container" style="width: 100%; border-radius: 0; padding: 0 15px; box-sizing: border-box;">
+<!-- স্লাইডার কন্টেইনার -->
+<div class="swiper mySwiper banner-swiper-container">
     <div class="swiper-wrapper">
         <!-- প্রথম স্লাইড -->
         <div class="swiper-slide">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/IMG_20260624_232331_416.jpeg" style="width: 100%; display: block; border-radius: 8px;">
+            <div class="premium-cover-box">
+                <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/IMG_20260624_232331_416.jpeg" alt="Banner 1">
+            </div>
         </div>
         
-
+        <!-- দ্বিতীয় স্লাইড -->
+        <div class="swiper-slide">
+            <div class="premium-cover-box">
+                <img src="https://raw.githubusercontent.com/aypoth/aypoth/refs/heads/main/IMG_20260623_003030_971.jpg" alt="Banner 2">
+            </div>
+        </div>
     </div>
-</div>
-
-
-
+    
+    <!-- পেজিনেশন ডট (নিচের ছোট বিন্দুগুলো) -->
     <div class="swiper-pagination"></div>
 </div>
 
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        speed: 800, // স্মুথ ট্রানজিশনের জন্য
-    });
-</script>
+<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- Swiper Initialize Script -->
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        effect: "fade", // আরও প্রফেশনাল ট্রানজিশনের জন্য
-        fadeEffect: { crossFade: true },
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        grabCursor: true,
-    });
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    effect: "fade", // সাইড থেকে স্লাইড হওয়া বন্ধ করে ফেড ইফেক্ট চালু করবে
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    grabCursor: true,
+  });
 </script>
+
 <div id="settingsModal" class="modal-overlay" 
      style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); z-index: 99999; justify-content: center; align-items: center; backdrop-filter: blur(8px); padding: 15px; box-sizing: border-box;">
     
